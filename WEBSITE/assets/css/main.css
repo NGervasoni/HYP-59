@@ -16,6 +16,11 @@ nav img {
     background-color: white;
 }
 
+#lg {
+    background-color: white;
+}
+
+
 
 
 
@@ -1796,6 +1801,8 @@ nav img {
 
 		/* Basic */
 
+        
+        
 			body, input, textarea, select {
 				font-size: 13pt;
 			}
@@ -1836,6 +1843,7 @@ nav img {
 					font-size: 1.25em;
 				}
 
+
 		/* Form */
 
 			form input[type="button"],
@@ -1874,6 +1882,7 @@ nav img {
 
 				.box.style1 {
 					padding: 3em 2em 3.5em 2em;
+                    height: 30em;
 				}
 
 					.box.style1 h3 {
@@ -1900,11 +1909,11 @@ nav img {
 		position: relative;
         
 		background-image: url("images/tim.jpg");
-		background-position: top left;
-		background-repeat: repeat, repeat, no-repeat;
-		background-size:contain;
+		background-position: left top;
+		background-repeat:no-repeat;
+		background-size:100%;
         width: auto;
-        height: 28em;
+        height: auto;
         overflow: hidden;
 		z-index: 1;
 	}
@@ -1918,6 +1927,7 @@ nav img {
 			.wrapper {
 				padding: 8em 0 8em 0;
 				text-align: center;
+                vertical-align: middle;
 			}
 
 				.wrapper.first {
@@ -1928,23 +1938,26 @@ nav img {
 
 	#banner {
         
-		position:relative;
 		background-color: rgba(178, 0, 0, 0.5);
 		background-position:center;
-		background-repeat: repeat, no-repeat;
+		background-repeat: no-repeat;
 		text-align: center;
-		margin: 8em;
-        margin-left: 20%;
+        vertical-align: middle;
+        margin-top: 10%;
+        margin-bottom: 10%;
+		margin-left: 20%;
         margin-right: 20%;
-        height: 12em;
+        height: 20%;
 	}
 
 		#banner p {
+            line-height: 180px;
 			display: block;
 			font-family: 'Open Sans Condensed', sans-serif;
-			font-weight: 700;
+			font-weight: lighter;
             font-size: 1.5em;
 			text-transform: uppercase;
+            text-align: center;
 			color: white;
 		}
 
@@ -2239,3 +2252,9 @@ nav img {
         0%;
     background-color: white;
 }
+
+.menuList {
+    text-align: justify;
+}
+
+
