@@ -8,6 +8,42 @@ body {
 }
 
 
+/*schedeeeeee----------------------------------------*/
+#tabsa li {
+    list-style: none;
+    float: left;
+    width: 150px;
+    height: 35px;
+    margin: 0 5px;
+}
+    #tabsa li a {
+        background-color: #dedede;
+        color: #222;
+        font-weight: bold;
+        text-decoration: none;
+        width: 150px;
+        height: 35px;
+        display: block;
+        float: left;
+        line-height: 35px;
+        text-align: center;
+    }
+        #tabsa li a:hover,
+        #tabsa li a:active { background-color: #ededed; }
+ 
+    div.content_schede {
+        color: #222;
+        font-family: Verdana;
+        font-size: 12px;
+        background-color: #efefef;
+        padding: 25px;
+        width: 600px;
+        height: 350px;
+        line-height: 22px;
+    }
+ 
+#container_schede { clear: both; }
+
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 
@@ -67,7 +103,7 @@ body {
 /* Center align the text within the three columns below the carousel */
 .marketing .col-lg-4 {
   margin-bottom: 20px;
-  text-align: center;
+  text-align: justify;
 }
 .marketing h2 {
   font-weight: normal;
