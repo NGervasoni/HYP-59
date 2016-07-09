@@ -9,40 +9,106 @@ body {
 
 
 /*schedeeeeee----------------------------------------*/
-#tabsa li {
-    list-style: none;
-    float: left;
-    width: 150px;
-    height: 35px;
-    margin: 0 5px;
+span {
+  display:block;
+  position:fixed;
+  top:0;
+  left:0;
 }
-    #tabsa li a {
-        background-color: #dedede;
-        color: #222;
-        font-weight: bold;
-        text-decoration: none;
-        width: 150px;
-        height: 35px;
-        display: block;
-        float: left;
-        line-height: 35px;
-        text-align: center;
-    }
-        #tabsa li a:hover,
-        #tabsa li a:active { background-color: #ededed; }
- 
-    div.content_schede {
-        color: #222;
-        font-family: Verdana;
-        font-size: 12px;
-        background-color: #efefef;
-        padding: 25px;
-        width: 600px;
-        height: 350px;
-        line-height: 22px;
-    }
- 
-#container_schede { clear: both; }
+
+/* --Basic tab dimension-- */
+#tab {
+  width:80%;
+  float: right;
+}
+
+#tab > ul {
+  margin:0 0;
+  padding:0 0;
+  height:30px;
+  overflow:hidden;
+}
+
+#tab > ul li {
+  float:right;
+  display:inline;
+  list-style:none;
+  margin:0 2em 0 0;
+  padding:0 0;
+}
+
+#tab > ul li a {
+  display:block;
+  background-color:white;
+    color:black;
+  font-weight:bold;
+  font-size:11px;
+  line-height:30px;
+  height:30px;
+  color:black;
+  text-decoration:none;
+  padding:0 30px;
+}
+
+
+#tab > div {
+  clear:both;
+  background-color:white;
+    color:black;
+  padding:0 15px;
+  height:0;
+  overflow:hidden;
+  visibility:hidden;
+  -webkit-transition:all .4s ease-in-out;
+  -moz-transition:all .4s ease-in-out;
+  -ms-transition:all .4s ease-in-out;
+  -o-transition:all .4s ease-in-out;
+  transition:all .4s ease-in-out;
+}
+
+#tab a:hover {
+				background-color: #0b3d86;
+			}
+/* ================================
+   Here's the CSS :target job list
+   ================================ */
+
+/* Reset the first tab button and the first tab content to the default behaviour if the hash is active */
+span:target ~ #tab > ul li:first-child a {
+  background-color:white;
+    color:black;
+}
+
+span:target ~ #tab > div:first-of-type {
+  visibility:hidden;
+  height:0;
+  padding:0 15px;
+}
+
+/* Always show the first tab container by default */
+span ~ #tab > div:first-of-type,
+/* Show a specific tab content based on the 'selected' target element */
+#tab-1:target ~ #tab > div.tab-content-1,
+#tab-2:target ~ #tab > div.tab-content-2,
+#tab-3:target ~ #tab > div.tab-content-3,
+#tab-4:target ~ #tab > div.tab-content-4 {
+  visibility:visible;
+  height:100em;
+  padding:10px 15px;
+}
+
+/* Always set the first tab with a 'current color' by default */
+span ~ #tab > ul li:first-child a,
+/* Set the current tab button color based on the 'selected' target element */
+#tab-1:target ~ #tab > ul li a[href$="#tab-1"],
+#tab-2:target ~ #tab > ul li a[href$="#tab-2"],
+#tab-3:target ~ #tab > ul li a[href$="#tab-3"],
+#tab-4:target ~ #tab > ul li a[href$="#tab-4"] {
+  background-color:#0b3d86;
+  color:white;
+}
+
+#cells{padding:20px 20px;}
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
