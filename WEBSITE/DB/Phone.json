@@ -1,0 +1,9 @@
+/**
+ Export to JSON plugin for PHPMyAdmin
+ @version 0.1
+ */
+
+// Database 'my_hyp59'
+// my_hyp59.Phone
+
+[{"available":"1","type":"SMARTPHONE","model":"P9","vendor":"HUAWEI","price":"600","new":"1","promotion":null,"presentation":"PREMIUM. ELEGANT. STYLISH.\r\nHuawei P9 presenta un design con linee dal forte impatto visivo, caratterizzate da spigoli tagliati a diamante e arrotondati a regola d\u2019arte. Lo smartphone ha una struttura unibody in alluminio aerospaziale e vetro 2.5D di categoria superiore, ed \u00e8 disponibile in due varianti cromatiche: Titanium Grey e Mystic Silver.\r\n\r\n\r\nDISPLAY LUMINOSO E DAI COLORI INTENSI\r\n\r\nCon una resa cromatica del 96%, il sensazionale display IPS Full HD da 5,2\" porta alla scoperta di un mondo ricco di colori intensi e ancora pi\u00f9 naturali.\r\n\r\nUN INNOVATIVO SISTEMA CON DOPPIA FOTOCAMERA, UNA COLLABORAZIONE UNICA\r\n\r\nLa collaborazione tra Huawei e Leica ha dato vita a uno smartphone con doppia fotocamera. Il risultato: maggiore luminosit\u00e0 e nitidezza per foto e video sensazionali.\r\n\r\nINNOVATIVO SISTEMA CON DOPPIA FOTOCAMERA\r\n\r\nHuawei P9 \u00e8 in grado di catturare immagini dai colori luminosi e garantire al contempo una resa in bianco e nero straordinaria; il tutto con lo stile senza tempo di Leica.La tecnologia con doppia fotocamera di Huawei P9 consente di catturare una maggiore quantit\u00e0 di luce, combinando al meglio la qualit\u00e0 del colore acquisito dal sensore RGB con i dettagli ottenuti dal sensore in bianco e nero. Il tutto per garantire il massimo risultato ad ogni scatto.","specs":"Sistema Operativo Android 6.0\r\nDisplay IPS Full HD da 5.2\u2019\u2019\r\nDoppia Fotocamera Leica da 12 Mpxl Dual Flash + anteriore da 8 Mpxl\r\nProcessore Kirin 955 - Octa-Core (4x2,5 GHz + 4x1,8 GHz)"}]
