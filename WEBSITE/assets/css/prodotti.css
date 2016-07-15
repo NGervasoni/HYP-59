@@ -11,23 +11,15 @@
 	font-family: sans-serif;
 }
 
-
 .breadcrumb2 {
- padding: 8px 15px;
-  margin-bottom: 20px;
-  list-style: none;
-  background-color:white;
-  border-radius: 4px;
+	padding: 8px 15px;
+	margin-bottom: 20px;
+	list-style: none;
+	background-color: white;
+	border-radius: 4px;
 }
 
-#prodottinavbar {
-	
-}
-
-.breadcrumb {
-
-}
-
-#prodottiTitle {
-	
+.phonebox > img {
+	width: 10em;
+	height: auto;
 }

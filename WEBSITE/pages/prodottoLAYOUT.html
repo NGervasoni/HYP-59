@@ -9,16 +9,18 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<link rel="icon" href="../../favicon.ico">
-	<title>Smartphone e Telefoni</title>
+	<title>Prodotto Layout</title>
 	<link rel="stylesheet" href="../assets/css/main.css" />
 	<link rel="stylesheet" href="../assets/css/prodotti.css" />
 	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="../assets/js/telefono.js"></script>
 	<!-- Bootstrap core CSS -->
 	<link href="../assets/css/bootstrap.min.css" rel="stylesheet">
 	<!-- Custom styles for this template -->
 	<link href="../assets/css/chi_siamo.css" rel="stylesheet">
 	<script>
 		$(function () {
+			ajaxFunction();
 			$("#header").load("../includes/header.html");
 			$("#footer").load("../includes/footer.html");
 			$("#prodottinavbar").load("../includes/ProdottiNavBar.html");
@@ -43,37 +45,60 @@
 				<div id="prodottinavbar"></div>
 			</div>
 			<div class="col-sm-10">
-				<ul class="nav nav-tabs navbar-right">
+				<ul class="nav nav-tabs">
 					<li class="active"><a data-toggle="tab" href="#Presentazione">Presentazione</a></li>
-					<li><a data-toggle="tab" href="#Specifiche">Specifiche Tecniche</a></li>
+					<li><a data-toggle="tab" href="#Specifiche">Specifiche</a></li>
 				</ul>
-				<div id="Presentazione" class="tab-content">
-					<div class="tab-pane fade in active"> </div>
+				<div class="tab-content">
+					<div id="Presentazione" class="tab-pane fade in active">
+						<div class="row">
+							<div class="col-sm-6 padding_right"> </div>
+							<div class="col-sm-6 padding_right">
+								<div class="phonebox">
+									<h2 id="nome">Vendor Model</h2>
+									<div itemprop="description">
+										<h5>Caratteristiche:</h5>
+										<ul>
+											<li>Sistema Operativo Android 6.0</li>
+											<li>Display IPS Full HD da 5.2’’</li>
+											<li>Doppia Fotocamera Leica da 12 Mpxl Dual Flash + anteriore da 8 Mpxl</li>
+											<li>Processore Kirin 955 - Octa-Core (4x2,5 GHz + 4x1,8 GHz)</li>
+										</ul>
+									</div>
+									<p id="prezzo">599,90 €</p>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="tab-content" id="Specifiche">
-					<h3>Menu 1</h3>
+				<div id="Specifiche" class="tab-pane fade">
 					<p>Some content in menu 1.</p>
 				</div>
-				<!-- Marketing messaging and featurettes
+			</div>
+		</div>
+	</div>
+	<!-- Marketing messaging and featurettes
     ================================================== -->
-				<!-- Wrap the rest of the page in another container to center all the content. -->
-				<!-- FOOTER -->
-				<footer>
-					<div id="footer"></div>
-				</footer>
-				<!-- /.container -->
-				<!-- Bootstrap core JavaScript
+	<!-- Wrap the rest of the page in another container to center all the content. -->
+	<!-- FOOTER -->
+	<footer>
+		<div id="footer"></div>
+	</footer>
+	<!-- /.container -->
+	<!-- Bootstrap core JavaScript
     ================================================== -->
-				<!-- Placed at the end of the document so the pages load faster -->
-				<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-				<script>
-					window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
-				</script>
-				<script src="../../dist/js/bootstrap.min.js"></script>
-				<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-				<script src="../../assets/js/vendor/holder.min.js"></script>
-				<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-				<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
+		window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
+	</script>
+	<script src="../../dist/js/bootstrap.min.js"></script>
+	<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+	<script src="../../assets/js/vendor/holder.min.js"></script>
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </body>
 
 </html>
