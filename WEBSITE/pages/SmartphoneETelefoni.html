@@ -13,101 +13,40 @@
 	<link rel="stylesheet" href="../assets/css/main.css" />
 	<link rel="stylesheet" href="../assets/css/prodotti.css" />
 	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="../assets/js/allphones.js"></script>
 	<!-- Bootstrap core CSS -->
 	<link href="../assets/css/bootstrap.min.css" rel="stylesheet">
 	<!-- Custom styles for this template -->
 	<link href="../assets/css/chi_siamo.css" rel="stylesheet">
 	<script>
 		$(function () {
+			ajaxFunction();
 			$("#header").load("../includes/header.html");
 			$("#footer").load("../includes/footer.html");
+			$("#prodottinavbar").load("../includes/ProdottiNavBar.html");
 		});
 	</script>
 </head>
 
 <body>
-	<div id="header"></div>
+	<div id="header" data-spy="affix" data-offset-top="60"></div>
 	<br>
 	<br>
 	<ol class="breadcrumb">
-		<li><a href="#">Home</a></li>
-		<li><a href="#">2013</a></li>
-		<li class="active">November</li>
+		<li><a href="prodotti.html">Prodotti</a></li>
+		<li class="active">Smartphone e Telefoni</li>
 	</ol>
-	<h3>Mixed: mobile, tablet, and desktop</h3>
+	<h3 id="prodottiTitle">Smartphone e Telefoni</h3>
 	<p></p>
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-2">
-				<ul class="nav nav-pills nav-stacked" data-spy="affix">
-					<li role="presentation" class="active"><a href="SmartphoneETelefoni.html">Smartphone e Telefoni</a></li>
-					<li role="presentation"><a href="tabletEpc.html">Tablet e Computer</a></li>
-					<li role="presentation"><a href="ModemENetworking.html">Modem e Networking</a></li>
-					<li role="presentation"><a href="TVeSmartLiving.html">TV e Smart Living</a></li>
-					<li role="presentation"><a href="Outlet.html">Outlet</a></li>
-				</ul>
+				<div id="prodottinavbar"></div>
 			</div>
 			<div class="col-sm-10">
 				<div class="col-sm-3 filtra_prodotto"> </div>
 				<div class="col-sm-9">
-					<div class="row">
-						<div class="col-sm-4">
-							<div class="panel panel-default">
-								<div class="panel-body">
-									<div class="phonebox"> <img class="img-responsive" src="../images/Phone/huawei-p9-grey-01.jpg">
-										<center>
-											<p id="Model">Model
-												<br>Vendor</p>
-											<p id="Price">Price</p>
-											<button type="button" class="btn btn-default btn-md">Scopri</button>
-										</center>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="panel panel-default">
-								<div class="panel-body">
-									<div class="phonebox"> <img class="img-responsive" src="../images/Phone/huawei-p9-grey-01.jpg">
-										<center>
-											<p id="Model">Model
-												<br>Vendor</p>
-											<p id="Price">Price</p>
-											<button type="button" class="btn btn-default btn-md">Scopri</button>
-										</center>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="panel panel-default">
-								<div class="panel-body">
-									<div class="phonebox"> <img class="img-responsive" src="../images/Phone/huawei-p9-grey-01.jpg">
-										<center>
-											<p id="Model">Model
-												<br>Vendor</p>
-											<p id="Price">Price</p>
-											<button type="button" class="btn btn-default btn-md">Scopri</button>
-										</center>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="panel panel-default">
-								<div class="panel-body">
-									<div class="phonebox"> <img class="img-responsive" src="../images/Phone/huawei-p9-grey-01.jpg">
-										<center>
-											<p id="Model">Model
-												<br>Vendor</p>
-											<p id="Price">Price</p>
-											<button type="button" class="btn btn-default btn-md">Scopri</button>
-										</center>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+					<div class="row" id='ajaxDiv'></div>
 				</div>
 				<!-- Marketing messaging and featurettes
     ================================================== -->
