@@ -53,7 +53,9 @@ ORDER BY `path` ASC LIMIT 1" ;
 		<p id="Model">'.$row[model].'
 			<br>'.$row[vendor].'</p>
 		<p id="Price">'.$row[price].'</p>
-		<button type="button" class="btn btn-default btn-md">Scopri</button>
+		<a href="prodottoLAYOUT.html">
+		<button type="button" class="btn btn-primary btn-md ">Scopri</button>
+	</a>
 	</center>
 </div></div></div></div>';
    }
