@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Copertura rete 4G</title>
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../assets/css/assistance.css" rel="stylesheet">
+    <script>
+        $(function () {
+            $("#header").load("../includes/header.html");
+            $("#footer").load("../includes/footer.html");
+        });
+        
+        
+        
+         $(document).ready(function () {
+            ajaxFunction();
+        });
+       
+        //Browser Support Code
+        function ajaxFunction() {
+            var ajaxRequest;
+
+            try {
+                // Opera 8.0+, Firefox, Safari
+                ajaxRequest = new XMLHttpRequest();
+            } catch (e) {
+                // Internet Explorer Browsers
+                try {
+                    ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
+                } catch (e) {
+                    try {
+                        ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
+                    } catch (e) {
+                        // Something went wrong
+                        alert("Your browser broke!");
+                        return false;
+                    }
+                }
+            }
+
+            // Create a function that will receive data 
+            // sent from the server and will update
+            // div section in the same page.
+            //state==4  request finished and response ready
+            ajaxRequest.onreadystatechange = function () {
+                if (ajaxRequest.readyState == 4) {
+                    var ajaxDisplay = document.getElementById('devices');
+                    ajaxDisplay.innerHTML = ajaxRequest.responseText;
+
+                }
+            }
+
+            // Now get the value from user and pass it to
+            // server script.
+
+           
+             
+            ajaxRequest.open("GET", "http://hyp59.altervista.org/phpFiles/loadDevices4G.php", true);
+            ajaxRequest.send(null);
+        }
+        
+        
+        
+        
+         function initMap() {
+        var mapDiv = document.getElementById('map');
+        var map = new google.maps.Map(mapDiv, {
+         
+            center: {lat: 45.27, lng: 9.11},
+            zoom: 8
+        });
+      }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhpLvKV2YWYCNiREMeYQeQXI0uvs1J8Rg&callback=initMap">
+    </script>
+
+    
+</head>
+
+<body>
+    <div id="header"></div>
+    <ol class="breadcrumb" id='bread'>
+		<li><a href="../pages/index.html">Home</a></li>
+        <li><a href="../pages/assistanceService.html">Assistenza</a></li>
+        <li><a href="../pages/assistanceService.html">Gestione linea e servizi</a></li>
+         <li><a href="assistanceService.html?Gestione%20linea%20e%20servizi&Mobile">Mobile</a></li>
+        <li>Verifica copertura 4G</li>
+	</ol>
+    <div class="container">
+
+
+        <span id="tab-1"></span>
+        <span id="tab-2"></span>
+
+        <!-- The main markup -->
+        <div id="tab">
+
+            <ul>
+                <li><a href="#tab-1">Descrizione</a></li>
+                <li><a href="#tab-2">FAQ</a></li>
+
+            </ul>
+            <div class="tab-content-1">
+                <div width="15%" style='float:left; margin:2%'>
+                <img src='../images/antenna.png'>
+                </div>
+                <div width="80%" style=' margin:2%'>
+                <h3>Copertura 4G</h3>
+                <p align=justify>Il 4GPLUS è la nuova rete mobile che da oggi ti permette di raggiungere connessioni fino a 300 Megabit al secondo. Come navigare con 4GPLUS? Navigare in aree coperte dalla rete 4GPLUS. Verifica la copertura Avere uno smartphone, tablet o modem wi fi abilitati alla rete 4GPLUS, scopri qui tutti i modelli Avere un’offerta 4G: fino al 31 dicembre 2016 tutti i clienti accedono gratuitamente ed automaticamente alle prestazioni del 4GPLUS<br></p>
+                    <hr>
+                </div>
+                <tr>
+                <div align='center'>
+                    <div id='cells'><input value="search city" color='#a9a9a9'></div> <div id='cells'><button value='Cerca'>Cerca</button></div>
+                </div>
+                    <br>
+                <div id="map"></div>
+                
+                <div id='faq'>
+                    <h4> Per usufrire della rete 4G devi disporre di un dispositivo 4G!<br> Guarda le nostre offerte:</h4>
+                </div>
+                
+                
+                <div id='devices'></div>
+                
+            </div>
+            
+            
+            
+            
+            
+            
+            <div class="tab-content-2">
+                <br><div id='faq'>
+                    
+                        <h4 style='color:#0b3d86' >Cosa è LTE?</h4>
+                            <p>LTE (Long Term Evolution) è la nuova tecnologia per la trasmissione dati su Rete Mobile nota anche come 4G.
+                                <br> La tecnologia 4G consente, la navigazione internet in mobilità fino a 100 Mbps in download e 50 Mbps in upload.
+                </div>
+                
+                <!-- / collapsaq -->
+                <!-- FAQ 2 -->
+                <div id='faq'>
+                    <h4 style='color:#0b3d86' data-target="#faq2" data-toggle="collapse">Quali sono i livelli di servizio e le prestazioni offerte da 4G?</h4>
+                        <p>Rispetto all’attuale tecnologia per la trasmissione dati (3G/HSPA), LTE offre prestazioni superiori. In particolare, con LTE, la velocità di download è circa 5 volte superiore rispetto alla tecnologia HSPA 21.1 Mbps ed è oltre il doppio rispetto a HSPA 42.2 Mbps.
+                            <br> La velocità di upload con LTE, invece, è circa 10 volte superiore a quella offerta dalla tecnologia HSPA 14.4/42.2 Mbps. </p>
+                </div>
+                <!-- / collapsaq -->
+                <!-- FAQ 3 -->
+                <div id='faq'>
+                    <h4 style='color:#0b3d86' data-target="#faq3" data-toggle="collapse">La tecnologia LTE: quali sono i vantaggi offerti?</h4>
+                        <p>Il 4G offre prestazioni e livelli di servizio che migliorano sensibilmente l’esperienza della navigazione internet e l’utilizzo di contenuti multimediali da parte del cliente (film, musica, giochi, libri) e l’accesso alla Cloud.
+                            <br> Di seguito alcuni esempi di utilizzo con una sintesi dei vantaggi che offre la tecnologia LTE: </p>
+                        <table class="table table-bordered table-condensed table-hover">
+                            <thead>
+                                <tr>
+                                    <th width="25%">Esempio di utilizzo</th>
+                                    <th>Vantaggi con la tecnologia LTE</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Navigazione internet</td>
+                                    <td>Navigazione rapida e senza interruzioni.
+                                        <br> Le pagine web si caricano velocemente e con fluidità.
+                                        <br> Internet è come sfogliare un giornale.</td>
+                                </tr>
+                                <tr>
+                                    <td>Video streaming</td>
+                                    <td>I video non hanno interruzioni né tempi di attesa.
+                                        <br> E' possibile guardare video di altà qualità/definizione.</td>
+                                </tr>
+                                <tr>
+                                    <td>Download</td>
+                                    <td>Il download di file e video anche di grandi dimensioni richiede tempi di attesa minimi.
+                                        <br> Il 4G offre infatti velocità di download circa 5 volte superiori a quella offerta dalla tecnologia 21.1 Mbps, e più del doppio rispetto alla tecnologia HSPA 42.2 Mbps. </td>
+                                </tr>
+                                <tr>
+                                    <td>Upload</td>
+                                    <td>Si possono caricare file, foto e video anche di grandi dimensioni (ad esempio su Cloud, forum, social network, etc…) in pochi istanti.
+                                        <br> Il 4G offre infatti velocità di upload di circa 10 volte superiori a quella offerta dalla tecnologia HSPA. </td>
+                                </tr>
+                                <tr>
+                                    <td>Gioco on line</td>
+                                    <td>Giocare on line diventa più facile e divertente. Il 4G è la tecnologia ideale per chi scommette on line o per chi gioca contemporaneamente con altri player. </td>
+                                </tr>
+                                <tr>
+                                    <td class="last">Contenuti e servizi evoluti</td>
+                                    <td class="last">Il 4G consente l’utilizzo ottimale dei servizi e dei contenuti di Telecom Italia TIMVISION, TIMREADING, TIMMUSIC, TIMGAME.
+                                        <br> Tra i servizi che saranno inclusi nell’offerta LTE di TIM si evidenzia il servizio Cloud.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                </div>
+                <!-- / collapsaq -->
+                <!-- FAQ 4 -->
+               <div id='faq'>
+                    <hr>
+                    <h4 style='color:#0b3d86' data-target="#faq4" data-toggle="collapse">Come verificare le città raggiunte dalla tecnologia 4G?</h4>
+                        <p>Nel menù “Copertura” è possibile verificare le città e le località raggiunte dalla tecnologia 4G. </p>
+                </div>
+                <!-- / collapsaq -->
+                <!-- FAQ 5 -->
+               <div id='faq'>
+                    <hr>
+                    <h4 style='color:#0b3d86' data-target="#faq5" data-toggle="collapse">Per navigare in 4G è necessario avere un prodotto abilitato?</h4>
+                        <p>E’ indispensabile avere un prodotto abilitato 4G, TIM propone un’ampio portafoglio di prodotti 4G tra Smartphone, Tablet, Chiavetta e Modem.
+                            <br> E’ possibile utilizzare un prodotto 4G anche non a listino TIM, come ad esempio iPhone acquistato direttamente in Apple. </p>
+                </div>
+                <!-- / collapsaq -->
+                <!-- FAQ 6 -->
+               <div id='faq'>
+                    <hr>
+                    <h4 style='color:#0b3d86' data-target="#faq6" data-toggle="collapse">Per accedere alla rete 4G devi avere un’offerta abilitante?</h4>
+                        <p>Oltre ad avere un prodotto 4G, è necessario attivare un’offerta Internet 4G o aggiungere alla tua offerta Internet l'Opzione abilitante 4GPLUS. </p>
+                </div>
+                <!-- / collapsaq -->
+                <!-- FAQ 7 -->
+               <div id='faq'>
+                    <hr>
+                    <h4 style='color:#0b3d86' data-target="#faq7" data-toggle="collapse">Per accedere alla rete 4G è necessario cambiare la SIM o cambiare numero di telefono?</h4>
+                        <p>Non è richiesto cambio SIM o cambio numero di telefono. E’ sufficiente disporre di una normale sim card abilitata ai servizi 3G (USIM). Solo nel caso in cui si dispone di una SIM di vecchia generazione, potrebbe essere necessario fare la sostituzione. </p>
+                </div>
+                <!-- / collapsaq -->
+                <!-- FAQ 8 -->
+               <div id='faq'>
+                    <hr>
+                    <h4 style='color:#0b3d86' data-target="#faq8" data-toggle="collapse">Come è possibile capire se si è attestati sulla rete 4G o sulla rete 3G?</h4>
+                        <p>Dal simbolo che sarà visualizzato sul proprio prodotto. Il simbolo LTE o 4G visualizzato sul display del proprio tablet, dello smartphone o sul connection manager della chiavetta indica la connessione su rete LTE. </p>
+                </div>
+                <!-- / collapsaq -->
+                <!-- FAQ 9 -->
+               <div id='faq'>
+                    <hr>
+                    <h4 style='color:#0b3d86' data-target="#faq9" data-toggle="collapse">Cosa succede quando sono in una zona non coperta dalla rete 4G?</h4>
+                        <p>Il prodotto si registrerà sulla migliore rete 3G disponibile, il prodotto deve essere configurato per poter gestire automaticamente il passaggio reti alternative al 4G. </p>
+                </div>
+                <!-- / collapsaq -->
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+    <div id='footer'></div>
+
+
+
+</body>
+
+</html>
