@@ -29,11 +29,11 @@ $path =$_GET['path'];
    $specs = mysql_real_escape_string($specs);
  $path = mysql_real_escape_string($path);
    
+   $vendor='HUAWEI';
    
-   
-   
+   $model='P9';
    //build query
-   $query = "SELECT * FROM Telefoni";
+   $query = "SELECT * FROM Telefoni WHERE vendor = '$vendor' && model= '$model'"; 
  
 
    //Execute query
@@ -41,21 +41,8 @@ $path =$_GET['path'];
    
 
   while($row = mysql_fetch_array($qry_result)) {
-	  $queryImg = "SELECT `path` FROM `Image` WHERE `vendor`= '$row[vendor]' && `model`='$row[model]'
-ORDER BY `path` ASC LIMIT 1" ;
-	  $qryImg_result = mysql_query($queryImg) or die(mysql_error());
-	  $pathrow = mysql_fetch_array($qryImg_result);
-	 $display_string .=  '<div class="col-sm-4">
-							<div class="panel panel-default">
-								<div class="panel-body"><center>
-<div class="phonebox"> <img class="img-responsive" src="'.$pathrow[path].'">
-	
-		<p id="Model">'.$row[model].'
-			<br>'.$row[vendor].'</p>
-		<p id="Price">'.$row[price].'</p>
-		<button type="button" class="btn btn-default btn-md">Scopri</button>
-	</center>
-</div></div></div></div>';
+	  
+	 $display_string .=  $row[specs];
    }
   
    echo $display_string;

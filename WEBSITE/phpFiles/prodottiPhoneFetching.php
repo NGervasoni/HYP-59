@@ -23,7 +23,7 @@ $path =$_GET['path'];
    $vendor = mysql_real_escape_string($vendor);
    $available = mysql_real_escape_string($available);
    $promotion = mysql_real_escape_string($promotion);
-   $type = mysql_real_escape_string($type);;
+   $type = mysql_real_escape_string($type);
    $new = mysql_real_escape_string($new);
    $presentation = mysql_real_escape_string($presentation);
    $specs = mysql_real_escape_string($specs);
@@ -59,4 +59,4 @@ ORDER BY `path` ASC LIMIT 1" ;
    }
   
    echo $display_string;
-?>
+?>
