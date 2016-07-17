@@ -1,0 +1,201 @@
+<html>
+    <head>
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Assistance Service</title>
+
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../assets/css/assistance.css" rel="stylesheet">
+    <script>
+        $(function () {
+            $("#header").load("../includes/header.html");
+            $("#footer").load("../includes/footer.html");
+        });
+        $(document).ready(function () {
+            ajaxFunction();
+        });
+        /*per effettuare query****************************************/
+        //Browser Support Code
+        function ajaxFunction() {
+            var ajaxRequest;
+
+            try {
+                // Opera 8.0+, Firefox, Safari
+                ajaxRequest = new XMLHttpRequest();
+            } catch (e) {
+                // Internet Explorer Browsers
+                try {
+                    ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
+                } catch (e) {
+                    try {
+                        ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
+                    } catch (e) {
+                        // Something went wrong
+                        alert("Your browser broke!");
+                        return false;
+                    }
+                }
+            }
+
+            // Create a function that will receive data 
+            // sent from the server and will update
+            // div section in the same page.
+            //state==4  request finished and response ready
+            ajaxRequest.onreadystatechange = function () {
+                if (ajaxRequest.readyState == 4) {
+                    var ajaxDisplay = document.getElementById('services');
+                    ajaxDisplay.innerHTML = ajaxRequest.responseText;
+                }
+            }
+
+            // Now get the value from user and pass it to
+            // server script.
+
+            /*var vendor = document.getElementById('vendor').value;
+             */
+            ajaxRequest.open("GET", "http://hyp59.altervista.org/phpFiles/assistanceService.php", true);
+            ajaxRequest.send(null);
+        }
+
+        /*  $(function(){
+          
+          $('.taskName').onclick(function() {
+    alert( $(this).text() );
+});
+      });*/
+
+        
+        /***** FUNZIONE CHE SI ATTIVA AL CLICK DEL DIV******/
+        
+        
+        /****** FUNZIONE CHE SI ATTIVA AL CLICK DELLE CATEGORIA ASSISTANCE SERVICE ******/
+        $(function () {
+            $('#services').click(function (e) {
+                var txt = $(e.target).text();
+                var queryRequest=showCategory(txt);
+                
+                queryRequest.onreadystatechange = function () {
+                    if (queryRequest.readyState == 4) {
+                        var ajaxDisplay = document.getElementById('services');
+                        ajaxDisplay.innerHTML = queryRequest.responseText;
+                    }
+                }
+            });
+        });
+        
+        function showCategory(txt){
+            
+
+                var queryRequest;
+
+                try {
+                    // Opera 8.0+, Firefox, Safari
+                    queryRequest = new XMLHttpRequest();
+                } catch (e) {
+                    // Internet Explorer Browsers
+                    try {
+                        queryRequest = new ActiveXObject("Msxml2.XMLHTTP");
+                    } catch (e) {
+                        try {
+                            queryRequest = new ActiveXObject("Microsoft.XMLHTTP");
+                        } catch (e) {
+                            // Something went wrong
+                            alert("Your browser broke!");
+                            return false;
+                        }
+                    }
+                }
+                
+                var queryString = "?Type=" + txt;
+                queryRequest.open("GET", "http://hyp59.altervista.org/phpFiles/assistanceServiceMore.php" + queryString, true);
+                queryRequest.send(null);
+            return queryRequest;
+        }
+        
+    </script>
+</head>
+
+<body>
+    <div id="header"><header>
+	<!-- Nav -->
+	<nav id="nav">
+		<ul class="container2">
+			<li id="logo">
+				<a href="index.html"><img src="../images/TIM_Logo_2016.png">.</a>
+			</li>
+			<li><a href="#gruppo">Il Gruppo</a></li>
+			<li><a href="chi_siamo.html">Chi Siamo</a></li>
+		</ul>
+		<ul class="container3">
+			<li><a href="../pages/prodotti.html">Prodotti</a></li>
+			<li><a href="#work">Offerte</a></li>
+			<li><a href="#portfolio">Smartlife</a></li>
+			<li><a href="#contact">Highlight</a></li>
+			<li><a href="#assistenza">Assistenza</a></li>
+		</ul>
+	</nav>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/skel-viewport.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="assets/js/main.js"></script>
+</header></div>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row" id="services"><div id="cells"><h3>Contenuti e Smart Life</h3><br><div role="button" tabindex="0" id="">TIM games</div><hr><br><div role="button" tabindex="0" id="">TIM MUSIC</div><hr><br><div role="button" tabindex="0" id="">TIM READING</div><hr><br><div role="button" tabindex="0" id="">TIM VISION</div><hr><br></div><div id="cells"><h3>Controllo costi e pagamenti</h3><br><div role="button" tabindex="0" id="">Mobile</div><hr><br><div role="button" tabindex="0" id="">Fisso</div><hr><br></div><div id="cells"><h3>Gestione linea e servizi</h3><br><div role="button" tabindex="0" id="">Fisso</div><hr><br><div role="button" tabindex="0" id="">Mobile</div><hr><br></div><div id="cells"><h3>Supporto tecnico e configurazioni</h3><br><div role="button" tabindex="0" id="">Smartphone e tablet</div><hr><br><div role="button" tabindex="0" id="">Linea telefonica</div><hr><br><div role="button" tabindex="0" id="">Adsl e fibra</div><hr><br><div role="button" tabindex="0" id="">Posta</div><hr><br><div role="button" tabindex="0" id="">Decoder TV</div><hr><br><div role="button" tabindex="0" id="">Navigazione</div><hr><br><div role="button" tabindex="0" id="">Sicurezza PC</div><hr><br></div></div>
+        <hr>
+        <div class="row" id="prova">
+        </div> 
+
+        <hr>
+
+        <div id="footer"><footer>
+    <div class="row">
+        <div class="12u">
+            <hr>
+            <h3>Find us on ...</h3>
+            <ul class="social">
+                <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><a href="#" class="icon fa-youtube"><span class="label">YouTube</span></a></li>
+                <li><a href="#" class="icon fa-vimeo"><span class="label">Vimeo</span></a></li>
+
+            </ul>
+            <hr>
+        </div>
+    </div>
+    <footer>
+        <ul id="copyright">
+            <li>© All rights reserved.</li>
+            <li>Design: HYP59</li>
+        </ul>
+    </footer>
+
+</footer></div>
+    </div>
+    <!-- /container -->
+
+
+
+
+
+</body></html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Assistance Service</title>
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../assets/css/assistance.css" rel="stylesheet">
+    <script>
+        
+       function escapeRegExp(str) {
+  return str.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
+}
+function replaceAll(str, find, replace) {
+  return str.replace(new RegExp(escapeRegExp(find), 'g'), replace);
+}
+        
+        $(function () {
+            $("#header").load("../includes/header.html");
+            $("#footer").load("../includes/footer.html");
+        });
+
+
+
+
+        $(document).ready(function () {
+                    var url = document.location.search;
+                    url=url.replace("?", '');
+            
+                    url=replaceAll(url,'%20', ' ');
+                    var two = url.split("&");
+                    if (two[0].length > 0 && two[1].length > 0) {
+                        var queryRequest = showCategory(two[1], two[0]);
+                        queryRequest.onreadystatechange = function () {
+                            if (queryRequest.readyState == 4) {
+                                if ((queryRequest.responseText).length != 0) {
+                                    
+                                    var ajaxDisplay = document.getElementById('services');
+                                    ajaxDisplay.innerHTML = queryRequest.responseText;
+                                    document.getElementById('bread').innerHTML += "<li><a href='../pages/assistanceService.html'>" + two[0] + "</a></li><li><a href='#' onclick='javascript:void(0);'>" + two[1] + "</a></li>";
+                                }
+                            }
+                        }} else
+                            ajaxFunction();
+                    });
+
+                /*per effettuare query****************************************/
+                //Browser Support Code
+                function ajaxFunction() {
+                    var ajaxRequest;
+
+                    try {
+                        // Opera 8.0+, Firefox, Safari
+                        ajaxRequest = new XMLHttpRequest();
+                    } catch (e) {
+                        // Internet Explorer Browsers
+                        try {
+                            ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
+                        } catch (e) {
+                            try {
+                                ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
+                            } catch (e) {
+                                // Something went wrong
+                                alert("Your browser broke!");
+                                return false;
+                            }
+                        }
+                    }
+
+                    // Create a function that will receive data 
+                    // sent from the server and will update
+                    // div section in the same page.
+                    //state==4  request finished and response ready
+                    ajaxRequest.onreadystatechange = function () {
+                        if (ajaxRequest.readyState == 4) {
+                            var ajaxDisplay = document.getElementById('services');
+                            ajaxDisplay.innerHTML = ajaxRequest.responseText;
+                            document.getElementById('bread').innerHTML += "<li><a href='../pages/assistanceService.html'>Assistenza</a></li>";
+                        }
+                    }
+
+                    // Now get the value from user and pass it to
+                    // server script.
+
+                    /*var vendor = document.getElementById('vendor').value;
+                     */
+                    ajaxRequest.open("GET", "http://hyp59.altervista.org/phpFiles/assistanceService.php", true);
+                    ajaxRequest.send(null);
+                }
+
+                /*  $(function(){
+          
+          $('.taskName').onclick(function() {
+    alert( $(this).text() );
+});
+      });*/
+
+
+                /***** FUNZIONE CHE SI ATTIVA AL CLICK DEL DIV******/
+
+
+                /****** FUNZIONE CHE SI ATTIVA AL CLICK DELLE CATEGORIA ASSISTANCE SERVICE ******/
+                $(function () {
+                    $('#services').click(function (e) {
+                        var head = e.target.id;
+                        var txt = $(e.target).text();
+                        var queryRequest = showCategory(txt, head);
+
+                        queryRequest.onreadystatechange = function () {
+                            if (queryRequest.readyState == 4) {
+                                if ((queryRequest.responseText).length != 0) {
+                                    var ajaxDisplay = document.getElementById('services');
+                                    ajaxDisplay.innerHTML = queryRequest.responseText;
+                                    document.getElementById('bread').innerHTML += "<li><a href='../pages/assistanceService.html'>" + head + "</a></li><li><a href='#' onclick='javascript:void(0);'>" + txt + "</a></li>";
+                                }
+                            }
+                        }
+                    });
+                });
+
+                function showCategory(txt, head) {
+
+
+                    var queryRequest;
+
+                    try {
+                        // Opera 8.0+, Firefox, Safari
+                        queryRequest = new XMLHttpRequest();
+                    } catch (e) {
+                        // Internet Explorer Browsers
+                        try {
+                            queryRequest = new ActiveXObject("Msxml2.XMLHTTP");
+                        } catch (e) {
+                            try {
+                                queryRequest = new ActiveXObject("Microsoft.XMLHTTP");
+                            } catch (e) {
+                                // Something went wrong
+                                alert("Your browser broke!");
+                                return false;
+                            }
+                        }
+                    }
+
+                    var queryString = "?Type=" + txt + "&Name=" + head;
+                    queryRequest.open("GET", "http://hyp59.altervista.org/phpFiles/assistanceServiceMore.php" + queryString, true);
+                    queryRequest.send(null);
+                    return queryRequest;
+                }
+    </script>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <ol class="breadcrumb" id='bread'>
+        <li><a href="../pages/index.html">Home</a></li>
+    </ol>
+    <div class="container">
+        <div class="row" id='services'>
+        </div>
+        <hr>
+        <div class="row" id='prova'>
+        </div>
+
+        <hr>
+
+        <div id="footer"></div>
+    </div>
+    <!-- /container -->
+
+
+
+</body>
+
+</html>
