@@ -1,17 +1,8 @@
-/* GLOBAL STYLES
--------------------------------------------------- */
-
-
-/* Padding below the footer and lighter body text */
-
 body {
-    padding-bottom: 40px;
-    color: #5a5a5a;
-    width=100%;
+    padding-top: 50px;
+    padding-bottom: 20px;
 }
 
-
-/*schedeeeeee----------------------------------------*/
 
 span {
     display: block;
@@ -20,9 +11,11 @@ span {
     left: 0;
 }
 
-
-/* --Basic tab dimension-- */
-
+#map {
+        width: 100%;
+        height: 400px;
+        background-color: grey;
+      }
 
 #tab > div {
     clear: both;
@@ -43,7 +36,6 @@ span {
     background-color: #0b3d86;
     color: white;
 }
-
 
 /* ================================
    Here's the CSS :target job list
@@ -81,9 +73,7 @@ span ~ #tab > div:first-of-type,
 /* Show a specific tab content based on the 'selected' target element */
 
 #tab-1:target ~ #tab > div.tab-content-1,
-#tab-2:target ~ #tab > div.tab-content-2,
-#tab-3:target ~ #tab > div.tab-content-3,
-#tab-4:target ~ #tab > div.tab-content-4 {
+#tab-2:target ~ #tab > div.tab-content-2 {
     visibility: visible;
     height: 100%;
     padding: 10px 15px;
@@ -93,61 +83,27 @@ span ~ #tab > div:first-of-type,
 /* Set the current tab button color based on the 'selected' target element */
 
 #tab-1:target ~ #tab > ul li a[href$="#tab-1"],
-#tab-2:target ~ #tab > ul li a[href$="#tab-2"],
-#tab-3:target ~ #tab > ul li a[href$="#tab-3"],
-#tab-4:target ~ #tab > ul li a[href$="#tab-4"] {
+#tab-2:target ~ #tab > ul li a[href$="#tab-2"] {
     background-color: #0b3d86;
     color: white;
 }
 
 
-/* MARKETING CONTENT
--------------------------------------------------- */
-
-
-/* Center align the text within the three columns below the carousel */
-
-.marketing .col-lg-4 {
-    margin-bottom: 20px;
-    text-align: justify;
-}
-
-.marketing h2 {
-    font-weight: normal;
-}
-
-.marketing .col-lg-4 p {
-    margin-right: 10px;
-    margin-left: 10px;
-}
-
-
-/* Featurettes
-------------------------- */
-
-.featurette-divider {
-    margin: 80px 0;
-    /* Space out the Bootstrap <hr> more */
-}
-
-
-/* Thin out the marketing headings */
-
-.featurette-heading {
-    font-weight: 300;
-    line-height: 1;
-    letter-spacing: -1px;
-}
-
-
-/* RESPONSIVE CSS
--------------------------------------------------- */
-
 @media (min-width: 664px) {
-    
-    #br{
-        display: block;
+    #cells {
+        width: 25%;
+        padding: 20px 20px;
+        display: inline-table;
     }
+    
+    #faq {
+        width: 100%;
+        padding: 20px 20px;
+        display: inline-table;
+        text-align: justify;
+    }
+    
+     }
     #btn_2 {
         float: left;
         width: 18%;
@@ -160,7 +116,7 @@ span ~ #tab > div:first-of-type,
     }
     
 #tab {
-    width: 80%;
+    width: 100%;
     float: right;
 }
     #tab > ul {
@@ -184,13 +140,7 @@ span ~ #tab > div:first-of-type,
     #ptitle {
         font-size: 18pt;
     }
-    #cells {
-        width: 30%;
-        font-size: 12pt;
-        padding: 20px 20px;
-        text-align: justify;
-        display: inline-table;
-    }
+    
     #tab > ul li {
         float: right;
         display: inline;
@@ -200,17 +150,21 @@ span ~ #tab > div:first-of-type,
     }
 }
 
-@media (min-width: 992px) {
-    .featurette-heading {
-        margin-top: 120px;
+@media (max-width: 663px) {
+    #cells {
+        margin: 5%;
+        padding: 10px 10px;
+        width: 90%;
     }
-}
-
-@media (max-width:664px) {
     
-    #br{
-        display: none;
+    #faq {
+        text-align: justify;
+        width: 90%;
+        padding: 20px 20px;
+        margin: 5%;
+        display: inline-table;
     }
+    
      #tab > ul {
         margin: 0 0;
         padding: 1px 1px;
@@ -233,38 +187,6 @@ span ~ #tab > div:first-of-type,
     #ptitle {
         font-size: 14pt;
     }
-    #cells {
-        font-size: 10pt;
-        width: 100%;
-        padding: 20px 20px;
-        text-align: justify;
-        display: inline-table;
-    }
     
     
-    @media (max-width:400px) {
-        
-        #br{
-        display: none;
-    }
-        #para{
-            font-size: 12pt;
-        text-align: center;
-            
-    }
-#tab {
-    width: 100%;
-    text-align: center;
-}
-    #tab4 {
-        float: left;
-    }
-    #ptitle {
-        font-size: 12pt;
-    }
-    #cells {
-        font-size: 9pt;
-        width: 100%;
-        text-align: justify;
-    }
 }
