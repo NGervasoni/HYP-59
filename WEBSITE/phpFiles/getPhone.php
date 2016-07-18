@@ -1,8 +1,6 @@
 <?php
-
-header('Content-type: text/html; charset=utf-8');
-
 $mysqli = mysqli_connect("localhost", "root", "","my_hyp59");
+$mysqli -> set_charset("utf8mb4");
 mysql_select_db("my_hyp59");
 
 if(mysqli_connect_errno()){
@@ -11,11 +9,13 @@ if(mysqli_connect_errno()){
 }
 
    // Retrieve data from Query String
+ $vendor = $_GET['vendor'];
    $model = $_GET['model'];
-   $vendor = $_GET['vendor'];
+  
    // Escape User Input to help prevent SQL Injection
+ $vendor = mysql_real_escape_string($vendor);
    $model = mysql_real_escape_string($model);
-   $vendor = mysql_real_escape_string($vendor);
+  
 
   //--------------------------------------FOR TESTING------------------------
    //$vendor='HUAWEI';

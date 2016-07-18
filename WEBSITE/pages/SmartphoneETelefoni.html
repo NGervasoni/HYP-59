@@ -13,7 +13,10 @@
 	<link rel="stylesheet" href="../assets/css/main.css" />
 	<link rel="stylesheet" href="../assets/css/prodotti.css" />
 	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<!-------------------- SCRIPT ---------------------------------->
 	<script src="../assets/js/allphones.js"></script>
+	<script src="../assets/js/loadSpecificPhonePage.js"></script>
+	<!-------------------- SCRIPT ---------------------------------->
 	<!-- Bootstrap core CSS -->
 	<link href="../assets/css/bootstrap.min.css" rel="stylesheet">
 	<!-- Custom styles for this template -->
@@ -24,11 +27,6 @@
 			$("#header").load("../includes/header.html");
 			$("#footer").load("../includes/footer.html");
 			$("#prodottinavbar").load("../includes/ProdottiNavBar.html");
-		});
-		$(document).ready(function () {
-			$(".dettagli").click(function () {
-				location.assign("prodottoLAYOUT.html?vendor=" + $("#vendor").html() + "&model=" + $("#model").html());
-			});
 		});
 	</script>
 </head>

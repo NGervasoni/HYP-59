@@ -33,7 +33,7 @@ function ajaxFunction() {
 		}
 		// Now get the value from user and pass it to
 		// server script.
-	var vendor = "LG";
+	var vendor = "HUAWEI";
 	//var wpm = document.getElementById('wpm').value;
 	//var sex = document.getElementById('sex').value;
 	var queryString = "&vendor=" + vendor;
