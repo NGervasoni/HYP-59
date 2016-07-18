@@ -1,0 +1,87 @@
+.rectangle{
+    text-align: center;
+    display: inline-table;
+    position: relative;
+    align-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.cmon{
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+}
+.Column{
+    text-align: center;
+    display: inline-table;
+    width: 220px;
+    height: 350px;
+    position: relative;
+    align-content: center;
+}
+
+h1, h3, h4{
+    margin: 2px;
+    color: crimson;
+}
+
+h5{
+    margin: 5px;}
+
+
+a[disabled] {
+    pointer-events: none;
+	}
+
+#dis.button{
+    background-color: gray;
+    color:gray;
+    outline-color: gray;
+    border-color: gray;
+    cursor: default;
+}
+
+#right.breadcrumb{
+    background-color: white;
+    float: right;
+}
+
+.myIframe {
+align-content: center;
+position: relative;
+height: 0;
+-webkit-overflow-scrolling:touch;
+} 
+.myIframe iframe {
+position: relative;
+top: 0;
+left: 0;
+width: 560px;
+height: 315px;
+}
+
+@media screen and (max-width: 630px) {
+    h1{
+        font-size: 2.5em;
+    }
+       h3{
+        font-size: 1.3em;
+    }   h4{
+        font-size: 1em;
+    }
+    .myIframe {
+position: relative;
+padding-bottom: 50.25%;
+padding-top: 30px;
+height: 0;
+overflow: auto; 
+-webkit-overflow-scrolling:touch;
+} 
+.myIframe iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}

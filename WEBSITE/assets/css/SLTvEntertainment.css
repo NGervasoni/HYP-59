@@ -1,0 +1,46 @@
+.Column{
+    text-align: center;
+    display: inline-table;
+    width: 220px;
+    height: 450px;
+    position: relative;
+    align-content: center;
+}
+
+.cmon{
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+h1, h3, h4{
+    margin: 2px;
+    color: crimson;
+}
+
+h5{
+    margin: 5px;}
+
+
+a[disabled] {
+    pointer-events: none;
+	}
+
+#dis.button{
+    background-color: gray;
+    color:gray;
+    outline-color: gray;
+    border-color: gray;
+    cursor: default;
+}
+
+#tabella{
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+td, th { 
+    border:1px solid #ddd;
+    padding:5px;
+}

@@ -1470,8 +1470,8 @@ nav img {
 					-moz-transition: background-color .2s ease-in-out;
 					-webkit-transition: background-color .2s ease-in-out;
 					-ms-transition: background-color .2s ease-in-out;
-					transition: background-color .2s ease-in-out;
-					background-color: #444;
+					/*transition: background-color .2s ease-in-out;
+					background-color: #444;*/
 					border-radius: 6px;
 					box-shadow: inset 0px 0px 0px 1px #282828, inset 0px 2px 1px 0px rgba(255, 255, 255, 0.1);
 					color: #2E2E2E !important;
@@ -1833,6 +1833,13 @@ nav img {
 				font-size: 1.5em;
 				letter-spacing: -0.015em;
 			}
+        
+            .footerh3{
+                font-family: Helvetica, sans-serif;
+				font-size: 2em;
+				letter-spacing: -0.015em;
+                color: dimgrey;
+            }
 
 			h1, h2, h3, h4, h5, h6 {
 				margin: 0 0 0.75em 0;
@@ -2177,7 +2184,7 @@ nav img {
 					}
 
 						ul.social li a:before {
-							background-color: transparent !important;
+							/*background-color: transparent !important;*/
 						}
 
 			ul.actions {
@@ -2273,5 +2280,4 @@ nav img {
 .menuList {
     text-align: justify;
 }
-
 
