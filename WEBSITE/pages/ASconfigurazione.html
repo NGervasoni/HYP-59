@@ -14,7 +14,8 @@
     <title>Configurazione Online</title>
 
     <link rel="stylesheet" href="../assets/css/main.css" />
-    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
 
     <!-- Bootstrap core CSS -->
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
@@ -72,8 +73,8 @@
             ajaxRequest.open("GET", "http://hyp59.altervista.org/phpFiles/loadVendor.php", true);
             ajaxRequest.send(null);
         }
-function loadPhone() {
-    var vend = document.getElementById('vendor').value;
+function findPhone(){
+                    var vend = document.getElementById('vendor').value;
     
     var ajaxRequest;
 
@@ -172,8 +173,7 @@ function loadPhone() {
      <ol class="breadcrumb" id='bread'>
 		<li><a href="../pages/index.html">Home</a></li>
         <li><a href="../pages/assistanceService.html">Assistenza</a></li>
-        <li><a href="../pages/assistanceService.html">Supporto tecnico e configurazioni</a></li>
-         <li><a href="assistanceService.html?Supporto%20tecnico%20e%20configurazioni&Smartphone%20e%20tablet">Smartphone e tablet</a></li>
+         <li><a href="assistanceService.html?Supporto%20tecnico%20e%20configurazioni&Smartphone%20e%20tablet">Supporto tecnico e configurazioni Smartphone e tablet</a></li>
         <li>Configurazione online</li>
 	</ol>
     <div class="container">
@@ -185,7 +185,7 @@ function loadPhone() {
            Vendor: 
          <div id="cells">
          
-           <select id = 'vendor' onclick="javascript:loadPhone();">
+           <select id = 'vendor' onchange="findPhone()" >
          </select>
            </div>
            Model: 

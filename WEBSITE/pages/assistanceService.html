@@ -52,7 +52,7 @@ function replaceAll(str, find, replace) {
                                     
                                     var ajaxDisplay = document.getElementById('services');
                                     ajaxDisplay.innerHTML = queryRequest.responseText;
-                                    document.getElementById('bread').innerHTML += "<li><a href='../pages/assistanceService.html'>" + two[0] + "</a></li><li><a href='#' onclick='javascript:void(0);'>" + two[1] + "</a></li>";
+                                    document.getElementById('bread').innerHTML += "</a></li><li><a href='#' onclick='javascript:void(0);'>" + two[0] +" "+two[1] + "</a></li>";
                                 }
                             }
                         }} else
@@ -90,7 +90,6 @@ function replaceAll(str, find, replace) {
                         if (ajaxRequest.readyState == 4) {
                             var ajaxDisplay = document.getElementById('services');
                             ajaxDisplay.innerHTML = ajaxRequest.responseText;
-                            document.getElementById('bread').innerHTML += "<li><a href='../pages/assistanceService.html'>Assistenza</a></li>";
                         }
                     }
 
@@ -126,7 +125,7 @@ function replaceAll(str, find, replace) {
                                 if ((queryRequest.responseText).length != 0) {
                                     var ajaxDisplay = document.getElementById('services');
                                     ajaxDisplay.innerHTML = queryRequest.responseText;
-                                    document.getElementById('bread').innerHTML += "<li><a href='../pages/assistanceService.html'>" + head + "</a></li><li><a href='#' onclick='javascript:void(0);'>" + txt + "</a></li>";
+                                    document.getElementById('bread').innerHTML +="</a></li><li><a href='#' onclick='javascript:void(0);'>" + head + " "+ txt + "</a></li>";
                                 }
                             }
                         }
@@ -169,6 +168,7 @@ function replaceAll(str, find, replace) {
 
     <ol class="breadcrumb" id='bread'>
         <li><a href="../pages/index.html">Home</a></li>
+        <li><a href="../pages/assistanceService.html">Assistenza</a></li>
     </ol>
     <div class="container">
         <div class="row" id='services'>
