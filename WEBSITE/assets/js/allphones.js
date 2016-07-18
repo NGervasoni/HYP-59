@@ -31,6 +31,6 @@ function ajaxFunction() {
 			ajaxDisplay.innerHTML = ajaxRequest.responseText;
 		}
 	}
-	ajaxRequest.open("GET", "http://hyp59.altervista.org/phpFiles/PhoneFetching.php", true);
+	ajaxRequest.open("GET", "http://hyp59.altervista.org/phpFiles/getAllPhones.php", true);
 	ajaxRequest.send(null);
 }

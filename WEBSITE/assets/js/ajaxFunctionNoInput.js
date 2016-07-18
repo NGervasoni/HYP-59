@@ -27,7 +27,7 @@ function ajaxFunctionNoInput() {
 	//state==4  request finished and response ready
 	ajaxRequest.onreadystatechange = function () {
 		if (ajaxRequest.readyState == 4) {
-			var ajaxDisplay = document.getElementById('ajaxDiv');
+			var ajaxDisplay = document.getElementById('smartphones');
 			ajaxDisplay.innerHTML = ajaxRequest.responseText;
 		};
 	};
