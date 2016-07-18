@@ -10,7 +10,9 @@ body {
     width=100%;
 }
 
-
+#descr{
+    padding-left: 5%;
+    padding-right: 5%;}
 /*schedeeeeee----------------------------------------*/
 
 span {
@@ -145,6 +147,11 @@ span ~ #tab > div:first-of-type,
 
 @media (min-width: 664px) {
     
+    #cont{
+    float: right;
+    width:80%;
+}
+    
     #br{
         display: block;
     }
@@ -243,6 +250,9 @@ span ~ #tab > div:first-of-type,
     
     
     @media (max-width:400px) {
+        
+           
+
         
         #br{
         display: none;

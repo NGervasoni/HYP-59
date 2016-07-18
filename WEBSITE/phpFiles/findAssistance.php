@@ -13,7 +13,7 @@ $query = "SELECT * FROM Image WHERE vendor='$vendor' AND model='$model' GROUP BY
    $qry_result = mysql_query($query) or die(mysql_error());
    //build query
    while($im = mysql_fetch_array($qry_result)){
-   $display_string="<div widht='30%'><img src='$im[path]' width=30%>$im[vendor] $im[model]</div>";
+   $display_string="<div widht='30%'><img src='$im[path]' width=30% onclick=loadPhone('$model','$vendor')>$im[vendor] $im[model]</div>";
    }
    echo $display_string;
    $query1 = "SELECT title FROM Configurazione WHERE vendor='$vendor' AND model='$model'";
