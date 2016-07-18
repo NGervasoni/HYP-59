@@ -14,7 +14,8 @@
 	<link rel="stylesheet" href="../assets/css/prodotti.css" />
 	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
 	<!-------------------- SCRIPT ---------------------------------->
-	<script src="../assets/js/ajaxFunctionNoInput.js"></script>
+	<!--------------------<script src="../assets/js/ajaxFunctionNoInput.js"></script>---------------------------------->
+	<script src="../assets/js/ajaxLoadAllProducts.js"></script>
 	<script src="../assets/js/loadSpecificPhonePage.js"></script>
 	<!-------------------- SCRIPT ---------------------------------->
 	<!-- Bootstrap core CSS -->
@@ -26,9 +27,8 @@
 			$("#header").load("../includes/header.html");
 			$("#footer").load("../includes/footer.html");
 			$("#prodottinavbar").load("../includes/ProdottiNavBar.html");
-			ajaxFunctionNoInput();
+			ajaxLoadAllProducts();
 		});
-
 	</script>
 </head>
 
@@ -54,136 +54,24 @@
 				<div class="panel panel-default">
 					<div class="panel-heading">Tablet e Computer</div>
 					<div class="panel-body">
-						<div class="row-fluid">
-							<div class="col-sm-4">
-								<div class="phonebox">
-									<center> <img class="img-responsive" src="../images/Phone/huawei-p9-grey-01.jpg">
-										<p id="Model">Model
-											<br>Vendor</p>
-										<p id="Price">Price</p>
-									</center>
-								</div>
-							</div>
-							<div class="col-sm-4">
-								<div class="phonebox">
-									<center> <img class="img-responsive" src="../images/Phone/huawei-p9-grey-01.jpg">
-										<p id="Model">Model
-											<br>Vendor</p>
-										<p id="Price">Price</p>
-									</center>
-								</div>
-							</div>
-							<div class="col-sm-4">
-								<div class="phonebox">
-									<center> <img class="img-responsive" src="../images/Phone/huawei-p9-grey-01.jpg">
-										<p id="Model">Model
-											<br>Vendor</p>
-										<p id="Price">Price</p>
-									</center>
-								</div>
-							</div>
-						</div>
+						<div id="tablet" class="row-fluid"> </div>
 					</div>
 					<div class="panel panel-default">
 						<div class="panel-heading">Modem e Networking</div>
 						<div class="panel-body">
-							<div class="row-fluid">
-								<div class="col-sm-4">
-									<div class="phonebox">
-										<center> <img class="img-responsive" src="../images/Phone/huawei-p9-grey-01.jpg">
-											<p id="Model">Model
-												<br>Vendor</p>
-											<p id="Price">Price</p>
-										</center>
-									</div>
-								</div>
-								<div class="col-sm-4">
-									<div class="phonebox">
-										<center> <img class="img-responsive" src="../images/Phone/huawei-p9-grey-01.jpg">
-											<p id="Model">Model
-												<br>Vendor</p>
-											<p id="Price">Price</p>
-										</center>
-									</div>
-								</div>
-								<div class="col-sm-4">
-									<div class="phonebox">
-										<center> <img class="img-responsive" src="../images/Phone/huawei-p9-grey-01.jpg">
-											<p id="Model">Model
-												<br>Vendor</p>
-											<p id="Price">Price</p>
-										</center>
-									</div>
-								</div>
-							</div>
+							<div id="networking" class="row-fluid"> </div>
 						</div>
 					</div>
 					<div class="panel panel-default">
 						<div class="panel-heading">TV e Smart Living</div>
 						<div class="panel-body">
-							<div class="row-fluid">
-								<div class="col-sm-4">
-									<div class="phonebox">
-										<center> <img class="img-responsive" src="../images/Phone/huawei-p9-grey-01.jpg">
-											<p id="Model">Model
-												<br>Vendor</p>
-											<p id="Price">Price</p>
-										</center>
-									</div>
-								</div>
-								<div class="col-sm-4">
-									<div class="phonebox">
-										<center> <img class="img-responsive" src="../images/Phone/huawei-p9-grey-01.jpg">
-											<p id="Model">Model
-												<br>Vendor</p>
-											<p id="Price">Price</p>
-										</center>
-									</div>
-								</div>
-								<div class="col-sm-4">
-									<div class="phonebox">
-										<center> <img class="img-responsive" src="../images/Phone/huawei-p9-grey-01.jpg">
-											<p id="Model">Model
-												<br>Vendor</p>
-											<p id="Price">Price</p>
-										</center>
-									</div>
-								</div>
-							</div>
+							<div id="smartliving" class="row-fluid"> </div>
 						</div>
 					</div>
 					<div class="panel panel-default">
 						<div class="panel-heading">Outlet</div>
 						<div class="panel-body">
-							<div class="row-fluid">
-								<div class="col-sm-4">
-									<div class="phonebox">
-										<center> <img class="img-responsive" src="../images/Phone/huawei-p9-grey-01.jpg">
-											<p id="Model">Model
-												<br>Vendor</p>
-											<p id="Price">Price</p>
-										</center>
-									</div>
-								</div>
-								<div class="col-sm-4">
-									<div class="phonebox">
-										<center> <img class="img-responsive" src="../images/Phone/huawei-p9-grey-01.jpg">
-											<p id="Model">Model
-												<br>Vendor</p>
-											<p id="Price">Price</p>
-										</center>
-									</div>
-								</div>
-								<div class="col-sm-4">
-									<div class="phonebox">
-										<center> <img class="img-responsive" src="../images/Phone/huawei-p9-grey-01.jpg">
-											<p id="Model">Model
-												<br>Vendor</p>
-											<p id="Price">Price</p>
-										</center>
-									</div>
-								</div>
-							</div>
+							<div id="outlet" class="row-fluid"> </div>
 						</div>
 					</div>
 				</div>
