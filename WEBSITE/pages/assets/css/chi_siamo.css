@@ -1,0 +1,268 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+
+
+/* Padding below the footer and lighter body text */
+
+body {
+    padding-bottom: 40px;
+    color: #5a5a5a;
+}
+
+
+/*schedeeeeee----------------------------------------*/
+
+span {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+/* --Basic tab dimension-- */
+
+
+#tab > div {
+    clear: both;
+    background-color: white;
+    color: black;
+    padding: 0 15px;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+#tab a:hover {
+    background-color: #0b3d86;
+    color: white;
+}
+
+
+/* ================================
+   Here's the CSS :target job list
+   ================================ */
+
+
+/* Reset the first tab button and the first tab content to the default behaviour if the hash is active */
+
+span:target ~ #tab > ul li:first-child a {
+    background-color: white;
+    color: black;
+    
+}
+
+span:target ~ #tab > ul li:first-child a:hover{
+     background-color: #0b3d86;
+    color: white;
+}
+
+span:target ~ #tab > div:first-of-type {
+    visibility: hidden;
+    height: 0;
+    padding: 0 15px;
+}
+
+  #btn_2 a:hover{
+        background-color: #0b3d86;
+        color:white;
+    }
+
+/* Always show the first tab container by default */
+
+span ~ #tab > div:first-of-type,
+
+/* Show a specific tab content based on the 'selected' target element */
+
+#tab-1:target ~ #tab > div.tab-content-1,
+#tab-2:target ~ #tab > div.tab-content-2,
+#tab-3:target ~ #tab > div.tab-content-3,
+#tab-4:target ~ #tab > div.tab-content-4 {
+    visibility: visible;
+    height: 100%;
+    padding: 10px 15px;
+}
+
+
+/* Set the current tab button color based on the 'selected' target element */
+
+#tab-1:target ~ #tab > ul li a[href$="#tab-1"],
+#tab-2:target ~ #tab > ul li a[href$="#tab-2"],
+#tab-3:target ~ #tab > ul li a[href$="#tab-3"],
+#tab-4:target ~ #tab > ul li a[href$="#tab-4"] {
+    background-color: #0b3d86;
+    color: white;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+
+/* Center align the text within the three columns below the carousel */
+
+.marketing .col-lg-4 {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.marketing h2 {
+    font-weight: normal;
+}
+
+.marketing .col-lg-4 p {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+    margin: 80px 0;
+    /* Space out the Bootstrap <hr> more */
+}
+
+
+/* Thin out the marketing headings */
+
+.featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 664px) {
+    
+    #br{
+        display: block;
+    }
+    #btn_2 {
+        float: left;
+        width: 18%;
+        margin:1%;
+    }
+    
+    #para{
+        text-align: left;
+         font-size: 14pt;
+    }
+    
+#tab {
+    width: 80%;
+    float: right;
+}
+    #tab > ul {
+        margin: 0 0;
+        padding: 0 0;
+        height: 30px;
+        overflow: hidden;
+    }
+    #tab > ul li a {
+        display: block;
+        background-color: white;
+        color: black;
+        font-weight: bold;
+        font-size: 11px;
+        line-height: 30px;
+        height: 30px;
+        color: black;
+        text-decoration: none;
+        padding: 0 30px;
+    }
+    #ptitle {
+        font-size: 18pt;
+    }
+    #cells {
+        width: 30%;
+        font-size: 12pt;
+        padding: 20px 20px;
+        text-align: justify;
+        display: inline-table;
+    }
+    #tab > ul li {
+        float: right;
+        display: inline;
+        list-style: none;
+        margin: 0 2em 0 0;
+        padding: 0 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .featurette-heading {
+        margin-top: 120px;
+    }
+}
+
+@media (max-width:664px) {
+    
+    #br{
+        display: none;
+    }
+     #tab > ul {
+        margin: 0 0;
+        padding: 1px 1px;
+        height: auto;
+        overflow: visible;
+    }
+    
+#tab {
+    width: 100%;
+    text-align: center;
+    
+}
+     #para{
+        text-align: center;
+          font-size: 12pt;
+    }
+    #tab4 {
+        float: left;
+    }
+    #ptitle {
+        font-size: 14pt;
+    }
+    #cells {
+        font-size: 10pt;
+        width: 100%;
+        padding: 20px 20px;
+        text-align: justify;
+        display: inline-table;
+    }
+    
+    
+    @media (max-width:400px) {
+        
+        #br{
+        display: none;
+    }
+        #para{
+            font-size: 12pt;
+        text-align: center;
+    }
+#tab {
+    width: 100%;
+    text-align: center;
+}
+    #tab4 {
+        float: left;
+    }
+    #ptitle {
+        font-size: 12pt;
+    }
+    #cells {
+        font-size: 9pt;
+        width: 100%;
+        text-align: justify;
+    }
+}

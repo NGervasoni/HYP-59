@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="icon" href="../../favicon.ico">
+	<title class="nome"> </title>
+	<link rel="stylesheet" href="../assets/css/main.css" />
+	<link rel="stylesheet" href="../assets/css/prodotti.css" />
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<!-------------------- SCRIPT ---------------------------------->
+	<script src="../assets/js/getPhone.js" charset="UTF-8"></script>
+	<script src="../assets/js/parseQueryString.js"></script>
+	<!-------------------- SCRIPT ---------------------------------->
+	<!-- Bootstrap core CSS -->
+	<link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Custom styles for this template -->
+	<link href="../assets/css/chi_siamo.css" rel="stylesheet">
+	<script>
+		$(function () {
+			$("#header").load("../includes/header.html");
+			$("#footer").load("../includes/footer.html");
+			$("#prodottinavbar").load("../includes/ProdottiNavBar.html");
+			$('.nome').html(getParameterByName('vendor') + " " + getParameterByName('model'));
+			ajaxFunction(getParameterByName('vendor'), getParameterByName('model'));
+		});
+
+		function presentazione() {
+			document.getElementById("Specifiche").style.display = "none";
+			document.getElementById("Presentazione").style.display = "initial";
+		}
+
+		function specifiche() {
+			document.getElementById("Presentazione").style.display = "none";
+			document.getElementById("Specifiche").style.display = "initial";
+		}
+	</script>
+</head>
+
+<body>
+	<div id="header"></div>
+	<br>
+	<br>
+	<ol class="breadcrumb">
+		<li><a href="prodotti.html">Prodotti</a></li>
+		<li><a href="SmartphoneETelefoni.html">Smartphone E Telefoni</a></li>
+		<li class="active nome">NomeProdotto</li>
+	</ol>
+	<p></p>
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="col-sm-2">
+				<div id="prodottinavbar"></div>
+			</div>
+			<div class="col-sm-10">
+				<ul class="nav nav-tabs">
+					<li class="active"><a data-toggle="tab" href="#Presentazione" onclick="presentazione()">Presentazione</a></li>
+					<li><a data-toggle="tab" href="#Specifiche" onclick="specifiche()">Specifiche</a></li>
+				</ul>
+				<div class="tab-content">
+					<div id="Presentazione" class="tab-pane fade in active">
+						<div class="row">
+							<div class="col-sm-6">
+								<div id="myCarousel" class="carousel slide container" data-ride="carousel" style="width: 80%; height:auto">
+									<ol class="carousel-indicators">
+										<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+										<li data-target="#myCarousel" data-slide-to="1"></li>
+										<li data-target="#myCarousel" data-slide-to="2"></li>
+										<li data-target="#myCarousel" data-slide-to="3"></li>
+									</ol>
+									<div id="carImg" class="carousel-inner" role="listbox" data-wrap="true"> </div>
+									<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"> <span class="sr-only">Previous</span> </a>
+									<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"> <span class="sr-only">Next</span> </a>
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div id="phoneboxPres"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="Specifiche" class="tab-pane fade ">
+					<div id="phoneboxSpecs">
+						<h2 class="nome">Vendor Model</h2>
+						<div id="description">
+							<h5>Caratteristiche:</h5>
+							<div class="table-responsive">
+								<table class="table">
+									<tbody id="specTable"> </tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Marketing messaging and featurettes
+    ================================================== -->
+	<!-- Wrap the rest of the page in another container to center all the content. -->
+	<!-- FOOTER -->
+	<footer>
+		<div id="footer"></div>
+	</footer>
+	<!-- /.container -->
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
+		window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
+	</script>
+	<script src="../../dist/js/bootstrap.min.js"></script>
+	<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+	<script src="../../assets/js/vendor/holder.min.js"></script>
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

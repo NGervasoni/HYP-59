@@ -1,0 +1,68 @@
+#model {
+	font-size: 1em;
+	font-family: sans-serif;
+	color: blue;
+	align-content: center;
+	margin-bottom: 0;
+}
+
+#price {
+	color: red;
+	font-size: 1.5em;
+	font-family: sans-serif;
+}
+
+.breadcrumb2 {
+	padding: 8px 15px;
+	margin-bottom: 20px;
+	list-style: none;
+	background-color: white;
+	border-radius: 4px;
+}
+
+.phonebox > img {
+	width: 10em;
+	height: auto;
+}
+
+.row-fluid {
+	height: 100%;
+	align-self: center;
+	text-align: left;
+}
+
+.centering {
+	float: none;
+	margin: 0 auto;
+}
+
+#specs h5 {
+	color: blue;
+}
+
+#prezzo p {
+	display: inline;
+}
+
+#prezzo {
+	color: red;
+}
+
+.description p {
+	display: inline;
+}
+
+#specTable > tr > td:first-of-type {
+	color: blue;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.cont-row h4 {
+	color: blue;
+	font-weight: bold;
+}
+
+#section1 h4 {
+	color: blue;
+}

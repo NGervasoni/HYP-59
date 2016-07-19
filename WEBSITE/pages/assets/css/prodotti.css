@@ -1,0 +1,36 @@
+#Model {
+	font-size: 1em;
+	font-family: sans-serif;
+	color: blue;
+	align-content: center;
+}
+
+#Price {
+	color: red;
+	font-size: 1.5em;
+	font-family: sans-serif;
+}
+
+.breadcrumb2 {
+	padding: 8px 15px;
+	margin-bottom: 20px;
+	list-style: none;
+	background-color: white;
+	border-radius: 4px;
+}
+
+.phonebox > img {
+	width: 10em;
+	height: auto;
+}
+
+.row-fluid {
+	height: 100%;
+	align-self: center;
+	text-align: left;
+}
+
+.centering {
+	float: none;
+	margin: 0 auto;
+}

@@ -7,6 +7,7 @@
 body {
     padding-bottom: 40px;
     color: #5a5a5a;
+    width=100%;
 }
 
 
@@ -249,6 +250,7 @@ span ~ #tab > div:first-of-type,
         #para{
             font-size: 12pt;
         text-align: center;
+            
     }
 #tab {
     width: 100%;

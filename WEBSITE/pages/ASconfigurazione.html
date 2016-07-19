@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Configurazione Online</title>
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../assets/css/assistance.css" rel="stylesheet">
+    <script>
+        $(function () {
+            $("#header").load("../includes/header.html");
+            $("#footer").load("../includes/footer.html");
+        });
+        $(document).ready(function () {
+            ajaxFunction();
+        });
+        /*per effettuare query****************************************/
+        //Browser Support Code
+        function ajaxFunction() {
+            var ajaxRequest;
+
+            try {
+                // Opera 8.0+, Firefox, Safari
+                ajaxRequest = new XMLHttpRequest();
+            } catch (e) {
+                // Internet Explorer Browsers
+                try {
+                    ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
+                } catch (e) {
+                    try {
+                        ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
+                    } catch (e) {
+                        // Something went wrong
+                        alert("Your browser broke!");
+                        return false;
+                    }
+                }
+            }
+
+            // Create a function that will receive data 
+            // sent from the server and will update
+            // div section in the same page.
+            //state==4  request finished and response ready
+            ajaxRequest.onreadystatechange = function () {
+                if (ajaxRequest.readyState == 4) {
+                    var ajaxDisplay = document.getElementById('vendor');
+                    ajaxDisplay.innerHTML = ajaxRequest.responseText;
+
+                }
+            }
+
+            // Now get the value from user and pass it to
+            // server script.
+
+            /*var vendor = document.getElementById('vendor').value;
+             */
+            ajaxRequest.open("GET", "http://hyp59.altervista.org/phpFiles/loadVendor.php", true);
+            ajaxRequest.send(null);
+        }
+function findPhone(){
+                    var vend = document.getElementById('vendor').value;
+    
+    var ajaxRequest;
+
+            try {
+                // Opera 8.0+, Firefox, Safari
+                ajaxRequest = new XMLHttpRequest();
+            } catch (e) {
+                // Internet Explorer Browsers
+                try {
+                    ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
+                } catch (e) {
+                    try {
+                        ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
+                    } catch (e) {
+                        // Something went wrong
+                        alert("Your browser broke!");
+                        return false;
+                    }
+                }
+            }
+
+            // Create a function that will receive data 
+            // sent from the server and will update
+            // div section in the same page.
+            //state==4  request finished and response ready
+            ajaxRequest.onreadystatechange = function () {
+                if (ajaxRequest.readyState == 4) {
+                    var ajaxDisplay = document.getElementById('model');
+                    ajaxDisplay.innerHTML = ajaxRequest.responseText;
+                }
+            }
+
+            // Now get the value from user and pass it to
+            // server script.
+
+            var vendor = document.getElementById('vendor').value;
+             
+            var queryString =  "?vendor=" + vend;
+            ajaxRequest.open("GET", "http://hyp59.altervista.org/phpFiles/findPhone.php"+queryString, true);
+            ajaxRequest.send(null);
+
+}
+        
+        
+        function find() {
+    var vend = document.getElementById('vendor').value;
+    var mod=document.getElementById('model').value;
+    var ajaxRequest;
+
+            try {
+                // Opera 8.0+, Firefox, Safari
+                ajaxRequest = new XMLHttpRequest();
+            } catch (e) {
+                // Internet Explorer Browsers
+                try {
+                    ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
+                } catch (e) {
+                    try {
+                        ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
+                    } catch (e) {
+                        // Something went wrong
+                        alert("Your browser broke!");
+                        return false;
+                    }
+                }
+            }
+
+            // Create a function that will receive data 
+            // sent from the server and will update
+            // div section in the same page.
+            //state==4  request finished and response ready
+            ajaxRequest.onreadystatechange = function () {
+                if (ajaxRequest.readyState == 4) {
+                    var ajaxDisplay = document.getElementById('services');
+                    ajaxDisplay.innerHTML = ajaxRequest.responseText;
+                }
+            }
+
+            // Now get the value from user and pass it to
+            // server script.
+
+             
+            var queryString =  "?vendor=" + vend+"&model="+mod;
+            
+            ajaxRequest.open("GET", "http://hyp59.altervista.org/phpFiles/findAssistance.php"+queryString, true);
+            ajaxRequest.send(null);
+
+}
+     
+    </script>
+</head>
+
+<body>
+    <div id="header"></div>
+
+     <ol class="breadcrumb" id='bread'>
+		<li><a href="../pages/index.html">Home</a></li>
+        <li><a href="../pages/assistanceService.html">Assistenza</a></li>
+         <li><a href="assistanceService.html?Supporto%20tecnico%20e%20configurazioni&Smartphone%20e%20tablet">Supporto tecnico e configurazioni Smartphone e tablet</a></li>
+        <li>Configurazione online</li>
+	</ol>
+    <div class="container">
+        <img src='../images/setting.png'>
+        <h3>Configurazione</h3>
+        <p>Se vuoi configurare il tuo Telefono, il tuo Tablet o la tua Chiavetta inserisci Marca e Modello. Se non conosci o non ricordi il modello del tuo telefonino accedi a MyTIM Mobile e potrai visualizzarlo:</p>
+        
+       <form name = 'myForm'>
+           Vendor: 
+         <div id="cells">
+         
+           <select id = 'vendor' onchange="findPhone()" >
+         </select>
+           </div>
+           Model: 
+           <div id="cells">
+           
+           <select id = 'model'>
+         </select>
+           </div>
+            <div id="cells">
+         <input align='center' type = 'button' onclick = 'find()' value = 'Cerca'/>
+           </div>
+           
+      </form>
+        <div class="container">
+        <div id='services'></div>
+        </div>
+    </div>
+    
+    <div id='footer'></div>
+
+
+
+</body>
+
+</html>
