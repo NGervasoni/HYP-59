@@ -19,11 +19,11 @@ if(mysqli_connect_errno()){
    //Execute query
    $qry_result2 = mysql_query($query2) or die(mysql_error());
    while($im = mysql_fetch_array($qry_result2)){
-   $display_string.="<div id='cells'><div align='center'><img src='$im[path]' width=80% onclick=loadPhone('$row[model]','$row[vendor]')></div>";
+   $display_string.="<div id='cells' ><div align='center'><img src='$im[path]' style='cursor:pointer' width=80% onclick=loadPhone('$row[model]','$row[vendor]')></div>";
    }
    
       $display_string .= "<div align='center'>$row[vendor] $row[model]</div></div>";
    }
    echo $display_string;
  
-?>
+?>

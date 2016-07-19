@@ -1,6 +1,12 @@
 <header>
-    <!-- Nav -->
-    <nav id="nav">
+    
+    
+    
+    
+    
+    <nav class="navbar navbar-default navbar-fixed-top" id='nav'>
+    
+        <div id='navUp'>
         <ul class="container2">
             <li id="logo">
                 <a href="index.html"><img src="../images/TIM_Logo_2016.png" />.</a>
@@ -8,16 +14,27 @@
             <li><a href="#gruppo">Il Gruppo</a></li>
             <li><a href="chi_siamo.html">Chi Siamo</a></li>
         </ul>
-        <ul class="container3">
-            <li><a href="../pages/prodotti.html">Prodotti</a></li>
-            <li><a href="#work">Offerte</a></li>
-            <li><a href="SmartLifeHome.html">Smartlife</a></li>
-
-<li>
-            <div class="dropdown">
-                <a href='#'  style='background-color=#000' data-toggle="dropdown">Highlight
-                    <span class="caret"></span></a>
-                <ul class="dropdown-menu" align='left'>
+    </div>
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+             
+            <span class="sr-only">menu</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+              
+          </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px; text-align:center;">
+          <ul class="nav navbar-nav" style=' text-align:center;'>
+            <li><a href="prodotti.html">Prodotti</a></li>
+            <li><a href="offerte.html">Offerte</a></li>
+            <li><a href="SmartLifeHome">Smartlife</a></li>
+             <li><a href="assistanceService">Assistenza</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">In evidenza <span class="caret"></span></a>
+              <ul class="dropdown-menu" style=' text-align:left;'>
                     <li><a href="#">Ricarica online</a></li>
                     <li><a href="#">Accedi alla mail</a></li>
                     <li><a href="#">Apri una segnalazione</a></li>
@@ -27,11 +44,16 @@
                     <li><a href="#">Brochure</a></li>
                     <li><a href="#">Aiutaci a migliorare</a></li>
                 </ul>
-            </div>
-</li>
-            <li><a href="../pages/assistanceService.html">Assistenza</a></li>
-        </ul>
+            </li>
+              
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
     </nav>
+    
+    
+    
+   
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
