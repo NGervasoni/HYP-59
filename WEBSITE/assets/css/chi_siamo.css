@@ -215,6 +215,12 @@ span ~ #tab > div:first-of-type,
 
 @media (max-width:664px) {
     
+        
+     #minfont{
+            font-size: 9pt;
+        }
+
+    
     #br{
         display: none;
     }
@@ -251,7 +257,9 @@ span ~ #tab > div:first-of-type,
     
     @media (max-width:400px) {
         
-           
+        #minfont{
+            font-size: 10pt;
+        }
 
         
         #br{

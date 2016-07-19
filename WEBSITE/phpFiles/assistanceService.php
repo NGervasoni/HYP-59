@@ -26,7 +26,7 @@ if(mysqli_connect_errno()){
       
       while($row2 = mysql_fetch_array($qry_result2)) {
       $var="'$row2[Type]'";
-      $display_string .= "<div role='button' tabindex='0' id='$row2[Name]' style='color:$row2[color]'>$row2[Type]</div>";
+      $display_string .= "<div role='button' tabindex='0' id='$row2[Name]' style='color:$row2[color];cursor:pointer;'>$row2[Type]</div>";
       $display_string .= "<hr><br>";
    }
             $display_string .= "</select></div>";
@@ -35,4 +35,4 @@ if(mysqli_connect_errno()){
   }
    
 
-?>
+?>

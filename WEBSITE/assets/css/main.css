@@ -31,6 +31,18 @@ body {
   opacity: 0;
 }
 
+a[disabled] {
+    pointer-events: none;
+	}
+
+#dis.button{
+    background-color: gray;
+    color:gray;
+    outline-color: gray;
+    border-color: gray;
+    cursor: default;
+}
+
 
 
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -1210,7 +1222,7 @@ body {
 /* Form */
 
 	form label {
-		color: #3e3e3e;
+		color: black;
 		font-weight: 700;
 		display: block;
 		margin: 0 0 0.5em 0;
@@ -1233,7 +1245,7 @@ body {
 		border-radius: 8px;
 		border: solid 1px #ddd;
 		background: #fff;
-		color: #bbb;
+		color: black;
 		box-shadow: inset 0px 2px 3px 1px rgba(0, 0, 0, 0.05), 0px 1px 0px 0px rgba(255, 255, 255, 0.025);
 		width: 100%;
 	}
@@ -1630,14 +1642,12 @@ body {
 
 
 #banner-wrapper {
-        
 		position: relative;
 		background-image: url("images/tim.jpg");
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size:auto;
-        width: 100%;
-        height: auto;
+        height: 80%;
         overflow: hidden;
 		z-index: 1;
 	}
@@ -1665,20 +1675,30 @@ body {
 		background-position: center;
 		background-repeat: no-repeat;
 		text-align: center;
-		margin-top: 10%;
-        margin-left: 20%;
-        margin-right: 20%;
-        margin-bottom: 10%;
+    vertical-align: middle;
+   margin-top: 12em;
+        margin-left: 5%;
+        margin-right: 5%;
 	}
 
 		#banner p {
+            padding-bottom: 5em;
+            padding-top: 5em;
+            padding-left: 5em;
+            padding-right: 5em;
 			display: block;
 			font-family: 'Open Sans Condensed', sans-serif;
-			font-weight: 700;
+			font-weight: lighter;
             font-size: 1.2em;
 			text-transform: uppercase;
+            text-align: center;
 			color: white;
 		}
+
+
+
+
+
 
 	.wrapper {
 		background-image: url("images/bg.png");
@@ -1696,6 +1716,7 @@ body {
 
 		.wrapper.style2 {
             width: auto;
+            
 			background-color: #fafafa;
 			text-shadow: 1px 1px 0px #fff;
 		}
@@ -1908,7 +1929,7 @@ body {
 
 				.box.style1 {
 					padding: 3em 2em 3.5em 2em;
-                    height: 30em;
+                    height: 70%;
 				}
 
 					.box.style1 h3 {
@@ -1933,15 +1954,14 @@ body {
 	#banner-wrapper {
         
 		position: relative;
-        
 		background-image: url("images/tim.jpg");
 		background-position: left top;
 		background-repeat:no-repeat;
-		background-size:100%;
-        width: 100%;
+        background-size:cover;
         height: 60%;
         overflow: hidden;
 		z-index: 1;
+        vertical-align: middle;
 	}
 
 	#main-wrapper {
@@ -1963,20 +1983,19 @@ body {
         /* Banner */
 
 	#banner {
-        
+        position: relative;
 		background-color: rgba(178, 0, 0, 0.5);
 		background-position:center;
 		background-repeat: no-repeat;
 		text-align: center;
         vertical-align: middle;
-        margin-top: 10%;
+        margin-top: 8em;
         margin-left: 20%;
         margin-right: 20%;
-        margin-bottom: 10%;
+        
 	}
 
 		#banner p {
-            line-height: 180px;
 			display: block;
 			font-family: 'Open Sans Condensed', sans-serif;
 			font-weight: lighter;
@@ -1984,6 +2003,10 @@ body {
 			text-transform: uppercase;
             text-align: center;
 			color: white;
+            padding-bottom: 3em;
+            padding-left: 2em;
+            padding-right: 2em;
+            padding-top: 3em;
 		}
 
 		/* Nav */
@@ -2076,7 +2099,6 @@ body {
 		/* Basic */
 
 			body {
-				min-width: 960px;
 				font-size: 11pt;
 			}
 
