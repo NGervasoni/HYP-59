@@ -13,7 +13,7 @@ if(mysqli_connect_errno()){
    //build query
  
 
-$query = "(SELECT model,vendor,price FROM Telefoni where promotion is not null) union (SELECT model,vendor,price FROM Networking where promotion is not null) union (SELECT model,vendor,price FROM TabletPC where promotion is not null) union (SELECT model,vendor, prezzo FROM SLdevices where promotion is not null)";
+$query = "(SELECT model,vendor,price, promotion FROM Telefoni where promotion is not null) union (SELECT model,vendor,price, promotion FROM Networking where promotion is not null) union (SELECT model,vendor,price, promotion FROM TabletPC where promotion is not null) union (SELECT model,vendor, prezzo, promotion FROM SLdevices where promotion is not null)";
 
    //Execute query
    $qry_result = mysql_query($query) or die(mysql_error());
@@ -27,7 +27,7 @@ $query = "(SELECT model,vendor,price FROM Telefoni where promotion is not null) 
 										<center> <img class="img-responsive" src="'.$pathrow[path].'">
 											<p id="Model">'.$row[model].'
 												<br>'.$row[vendor].'</p>
-											<p id="Price">'.$row[price].'</p>
+											<p id="Price"><del>'.$row[price].' &#8364</del>   '.$row[promotion].' &#8364</p>
 											<button id="Scopri" type="button" onclick="loadPhone(\''.$row[model].'\',\''.$row[vendor].'\')" class="btn btn-primary btn-md">Scopri</button>
 										</center>
 									</div>

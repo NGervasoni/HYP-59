@@ -21,7 +21,6 @@
 		$(function () {
 			$("#header").load("../includes/header.html");
 			$("#footer").load("../includes/footer.html");
-			$("#prodottinavbar").load("../includes/ProdottiNavbar.html");
 		});
 	</script>
 </head>
@@ -31,16 +30,19 @@
 	<br>
 	<br>
 	<ol class="breadcrumb">
-		<li><a href="#">Home</a></li>
-		<li><a href="#">2013</a></li>
-		<li class="active">November</li>
+		<li><a href="prodotti.html">Prodotti</a></li>
+		<li class="active">Modem e Networking</li>
 	</ol>
-	<h3>Modem e Networking</h3>
-	<p></p>
 	<div class="container-fluid">
 		<div class="row-fluid">
 			<div class="col-sm-2">
-				<div id="prodottinavbar"></div>
+				<ul id="prodottinavbar" class="nav nav-pills nav-stacked">
+					<li role="presentation"><a href="SmartphoneETelefoni.html">Smartphone e Telefoni</a></li>
+					<li role="presentation"><a href="tabletEpc.html">Tablet e Computer</a></li>
+					<li role="presentation" class="active"><a href="ModemENetworking.html">Modem e Networking</a></li>
+					<li role="presentation"><a href="TVeSmartLiving.html">TV e Smart Living</a></li>
+					<li role="presentation"><a href="Outlet.html">Outlet</a></li>
+				</ul>
 			</div>
 			<div class="col-sm-10">
 				<div class="col-sm-3 filtra_prodotto"> </div>
