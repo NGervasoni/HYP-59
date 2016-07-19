@@ -22,12 +22,12 @@ if(mysqli_connect_errno()){
 	  $pathrow = mysql_fetch_array($qryImg_result);
 	 $display_string .= '<div class="col-sm-4">
 									<div class="phonebox">
-										<center> <img class="img-responsive" src="'.$pathrow[path].'">
+										<img class="img-responsive" src="'.$pathrow[path].'">
 											<p id="Model">'.$row[model].'
 												<br>'.$row[vendor].'</p>
 											<p id="Price">'.$row[price].'</p>
 											<button id="Scopri" type="button" onclick="loadPhone(\''.$row[model].'\',\''.$row[vendor].'\')" class="btn btn-primary btn-md">Scopri</button>
-										</center>
+										
 									</div>
 								</div>' ;
    }

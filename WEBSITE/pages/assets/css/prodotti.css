@@ -24,13 +24,14 @@
 	height: auto;
 }
 
-.row-fluid {
-	height: 100%;
-	align-self: center;
-	text-align: left;
-}
+
 
 .centering {
 	float: none;
 	margin: 0 auto;
+}
+
+
+.lefticon {
+	width: 20%;
 }

@@ -11,7 +11,9 @@ if(mysqli_connect_errno()){
    
    
    //build query
-   $query = "SELECT * FROM Networking LIMIT 3";
+ 
+
+$query = "(SELECT model,vendor,price FROM Telefoni where promotion is not null) union (SELECT model,vendor,price FROM Networking where promotion is not null) union (SELECT model,vendor,price FROM TabletPC where promotion is not null) union (SELECT model,vendor, prezzo FROM SLdevices where promotion is not null) limit 3";
 
    //Execute query
    $qry_result = mysql_query($query) or die(mysql_error());
@@ -21,15 +23,16 @@ if(mysqli_connect_errno()){
 	  $qryImg_result = mysql_query($queryImg) or die(mysql_error());
 	  $pathrow = mysql_fetch_array($qryImg_result);
 	 $display_string .= '<div class="col-sm-4">
-									<div class="phonebox">
-										<center> <img class="img-responsive" src="'.$pathrow[path].'">
-											<p id="Model">'.$row[model].'
-												<br>'.$row[vendor].'</p>
-											<p id="Price">'.$row[price].'</p>
-											<button id="Scopri" type="button" onclick="loadPhone(\''.$row[model].'\',\''.$row[vendor].'\')" class="btn btn-primary btn-md">Scopri</button>
-										</center>
-									</div>
-								</div>' ;
+							<div class="panel panel-default">
+								<div class="panel-body"><center>
+<div class="phonebox"> <img class="img-responsive" src="'.$pathrow[path].'">
+		<p id="model">'.$row[model].'</p>
+		<p id="vendor">'.$row[vendor].'</p>
+        
+		<button id="dettagli" type="button" onclick="loadPhone(\''.$row[model].'\',\''.$row[vendor].'\')" class="btn btn-primary btn-md">Scopri</button>
+	
+	</center>
+</div></div></div></div>' ;
    }
   
    echo $display_string;
