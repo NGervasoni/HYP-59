@@ -30,7 +30,11 @@ nav img {
     background-color: white;
 }
 
-
+#footer{
+    align-content: ='center';
+    align-items: center;
+    text-align: center;
+}
 
 a[disabled] {
     pointer-events: none;
@@ -121,7 +125,7 @@ a[disabled] {
 		width: 960px;
 	}
 
-	@media screen and (min-width: 737px) {
+	@media screen and (min-width: 767px) {
 
 		.container.\31 25\25 {
 			width: 100%;
@@ -147,7 +151,7 @@ a[disabled] {
 
 	}
 
-	@media screen and (min-width: 737px) and (max-width: 1400px) {
+	@media screen and (min-width: 767px) and (max-width: 1400px) {
 
 		.container.\31 25\25 {
 			width: 100%;
@@ -173,8 +177,11 @@ a[disabled] {
 
 	}
 
-	@media screen and (max-width: 736px) {
+	@media screen and (max-width: 766px) {
 
+    
+        
+        
 		.container.\31 25\25 {
 			width: 100%;
 			max-width: 125%;
@@ -469,7 +476,7 @@ a[disabled] {
 .\-1u {
     margin-left: 8.33333%;
 }
-	@media screen and (min-width: 737px) {
+	@media screen and (min-width: 767px) {
 
 		.row > * {
 			padding: 25px 0 0 25px;
@@ -684,7 +691,7 @@ a[disabled] {
 
 	}
 
-	@media screen and (min-width: 737px) and (max-width: 1200px) {
+	@media screen and (min-width: 767px) and (max-width: 1200px) {
 
 		.row > * {
 			padding: 25px 0 0 25px;
@@ -899,7 +906,7 @@ a[disabled] {
 
 	}
 
-	@media screen and (max-width: 736px) {
+	@media screen and (max-width: 766px) {
 
 		.row > * {
 			padding: 15px 0 0 15px;
@@ -1862,7 +1869,7 @@ vertical-align: middle;
 
 /*---------------------------------------------------- Desktop------------------------------------------------------- */
 
-	@media screen and (min-width: 737px) {
+	@media screen and (min-width: 767px) {
 
 		/* Basic */
 
@@ -2124,7 +2131,7 @@ vertical-align: middle;
 
 /* Tablet */
 
-	@media screen and (min-width: 737px) and (max-width: 1200px) {
+	@media screen and (min-width: 767px) and (max-width: 1200px) {
 
 		/* Basic */
 
@@ -2168,7 +2175,7 @@ vertical-align: middle;
 
 /* Mobile */
 
-	@media screen and (max-width: 736px) {
+	@media screen and (max-width: 766px) {
 
 		/* Basic */
 
@@ -2325,7 +2332,7 @@ vertical-align: middle;
 
 
 .container2 {
-    margin-left: -30%;
+    margin-left: -20%;
 }
 
 .container3 {
