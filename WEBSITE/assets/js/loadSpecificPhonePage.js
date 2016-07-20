@@ -1,3 +1,3 @@
 function loadPhone(model, vendor) {
-	location.assign("prodottoLAYOUT.html?vendor=" + vendor + "&model=" + model);
+	location.assign("telefono.html?vendor=" + vendor + "&model=" + model);
 }
