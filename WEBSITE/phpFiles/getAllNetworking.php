@@ -26,7 +26,7 @@ ORDER BY `path` ASC LIMIT 1" ;
 		<p id="vendor">'.$row[vendor].'</p>';
 	  
 	  if($row[promotion]!=null){
-		  $display_string .= '<div style="display: inline-block"><p id="price"><del>'.$row[price].' &#8364</del></p><p id="promotion">&nbsp'.$row[promotion].' &#8364</p></div>';
+		  $display_string .= '<div><p id="price"><del>'.$row[price].' &#8364</del></p><p id="promotion">&nbsp'.$row[promotion].' &#8364</p></div>';
 	  }
 	  else{
 		  $display_string .= '<div><p id="price">'.$row[price].' &#8364</p><div>';
