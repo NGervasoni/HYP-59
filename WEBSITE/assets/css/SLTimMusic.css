@@ -61,6 +61,10 @@ width: 560px;
 height: 315px;
 }
 
+.modal{
+    z-index: 11000;
+}
+
 @media screen and (max-width: 630px) {
     h1{
         font-size: 2.5em;

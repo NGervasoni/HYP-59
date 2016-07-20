@@ -18,8 +18,8 @@ if(mysqli_connect_errno()){
    
    
   //--------------------------------------FOR TESTING------------------------
-   $vendor='HUAWEI';
-   $model='P9';
+   //$vendor='HUAWEI';
+   //$model='P9';
   //--------------------------------------FOR TESTING------------------------
    
    
@@ -29,7 +29,15 @@ ORDER BY `path`" ;
 $qryImg_result = mysql_query($queryImg) or die(mysql_error());
 $i=0;
 while($pathrow = mysql_fetch_array($qryImg_result)){
-	  $i++;
+		if($i==0){
+	$carouselString =	'<ol class="carousel-indicators">	<li data-target="#myCarousel" data-slide-to="0" class="active"></li>';
+}
+else{
+	$carouselString .= '<li data-target="#myCarousel" data-slide-to="'$i'"></li>';
+}
+	  $i++;				
+										
+									
 if($i==1){
 	$display_string ='<div class="item active"><img src="'.$pathrow[path].'"></div>';				
 }
@@ -37,7 +45,7 @@ else{
 	$display_string .=  '<div class="item"> <img src="'.$pathrow[path].'"></div>';
 }
 }
-
+$carouselString .='</ol>';
 	   
    echo $display_string;
 
