@@ -184,7 +184,7 @@
 
             var queryString = "?vendor=" + vend + "&model=" + mod;
 
-            ajaxRequest.open("GET", "http://hyp59.altervista.org/phpFiles/findAssistance.php" + queryString, true);
+            ajaxRequest.open("GET", "http://hyp59.altervista.org/phpFiles/loadConfiguration.php" + queryString, true);
             ajaxRequest.send(null);
 
         }
@@ -222,8 +222,10 @@
             </div>
 
         </form>
-        <div>
-            <div id='services'></div>
+        <div class='container-fluid'>
+            <div class='row' >
+                <div  id='services'></div>
+            </div>
         </div>
     </div>
 

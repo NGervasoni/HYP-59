@@ -1,0 +1,38 @@
+body {
+    padding-bottom: 40px;
+    color: #5a5a5a;
+    width=100%;
+}
+
+#frm{
+    margin: 0 10% 0 10%;
+}
+
+@media (max-width: 736px) {
+    #frm{
+        margin: 0 10% 0 10%;
+    }
+    
+    #imgContact{
+        width:100%;
+    }
+
+#short{
+    width:100%;
+    }}
+
+@media (min-width: 736px) {
+    #frm{
+        margin: 0 15% 0 15%;
+    }
+    
+   
+
+    
+     #imgContact{
+        align-content: center;
+        width:40%;
+    }
+#short{
+    width:250;
+    }}
