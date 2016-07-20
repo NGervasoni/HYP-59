@@ -14,11 +14,11 @@
     <title>Configurazione Online</title>
 
     <link rel="stylesheet" href="../assets/css/main.css" />
-    
-   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
     <script src="../assets/js/loadSpecificPhonePage.js"></script>
 
     <!-- Custom styles for this template -->
@@ -30,7 +30,14 @@
         });
         $(document).ready(function () {
             ajaxFunction();
+
+
+
+
         });
+
+
+
         /*per effettuare query****************************************/
         //Browser Support Code
         function ajaxFunction() {
@@ -62,6 +69,15 @@
                 if (ajaxRequest.readyState == 4) {
                     var ajaxDisplay = document.getElementById('vendor');
                     ajaxDisplay.innerHTML = ajaxRequest.responseText;
+                    var url = document.location.search;
+                    url = url.replace("?", '');
+                    var two = url.split("&");
+                    if (two[0].length > 0 && two[1].length > 0) {
+                        document.getElementById('vendor').value = two[0];
+                        findPhone();
+                    }
+
+
 
                 }
             }
@@ -74,10 +90,11 @@
             ajaxRequest.open("GET", "http://hyp59.altervista.org/phpFiles/loadVendor.php", true);
             ajaxRequest.send(null);
         }
-function findPhone(){
-                    var vend = document.getElementById('vendor').value;
-    
-    var ajaxRequest;
+
+        function findPhone() {
+            var vend = document.getElementById('vendor').value;
+
+            var ajaxRequest;
 
             try {
                 // Opera 8.0+, Firefox, Safari
@@ -105,6 +122,13 @@ function findPhone(){
                 if (ajaxRequest.readyState == 4) {
                     var ajaxDisplay = document.getElementById('model');
                     ajaxDisplay.innerHTML = ajaxRequest.responseText;
+                    var url = document.location.search;
+                    url = url.replace("?", '');
+                    var two = url.split("&");
+                    if (two[0].length > 0 && two[1].length > 0) {
+                        document.getElementById('model').value = two[1];
+                        find();
+                    }
                 }
             }
 
@@ -112,18 +136,18 @@ function findPhone(){
             // server script.
 
             var vendor = document.getElementById('vendor').value;
-             
-            var queryString =  "?vendor=" + vend;
-            ajaxRequest.open("GET", "http://hyp59.altervista.org/phpFiles/findPhone.php"+queryString, true);
+
+            var queryString = "?vendor=" + vend;
+            ajaxRequest.open("GET", "http://hyp59.altervista.org/phpFiles/findPhone.php" + queryString, true);
             ajaxRequest.send(null);
 
-}
-        
-        
+        }
+
+
         function find() {
-    var vend = document.getElementById('vendor').value;
-    var mod=document.getElementById('model').value;
-    var ajaxRequest;
+            var vend = document.getElementById('vendor').value;
+            var mod = document.getElementById('model').value;
+            var ajaxRequest;
 
             try {
                 // Opera 8.0+, Firefox, Safari
@@ -157,54 +181,52 @@ function findPhone(){
             // Now get the value from user and pass it to
             // server script.
 
-             
-            var queryString =  "?vendor=" + vend+"&model="+mod;
-            
-            ajaxRequest.open("GET", "http://hyp59.altervista.org/phpFiles/findAssistance.php"+queryString, true);
+
+            var queryString = "?vendor=" + vend + "&model=" + mod;
+
+            ajaxRequest.open("GET", "http://hyp59.altervista.org/phpFiles/findAssistance.php" + queryString, true);
             ajaxRequest.send(null);
 
-}
-     
+        }
     </script>
 </head>
 
 <body>
     <div id="header"></div>
 
-     <ol class="breadcrumb" id='bread'>
-		<li><a href="../pages/index.html">Home</a></li>
+    <ol class="breadcrumb" id='bread'>
         <li><a href="../pages/assistanceService.html">Assistenza</a></li>
-         <li><a href="assistanceService.html?Supporto%20tecnico%20e%20configurazioni&Smartphone%20e%20tablet">Supporto tecnico e configurazioni Smartphone e tablet</a></li>
+        <li><a href="assistanceService.html?Supporto%20tecnico%20e%20configurazioni&Smartphone%20e%20tablet">Supporto tecnico e configurazioni Smartphone e tablet</a></li>
         <li>Configurazione online</li>
-	</ol>
+    </ol>
     <div class="container">
         <img src='../images/setting.png'>
         <h3>Configurazione</h3>
         <p>Se vuoi configurare il tuo Telefono, il tuo Tablet o la tua Chiavetta inserisci Marca e Modello. Se non conosci o non ricordi il modello del tuo telefonino accedi a MyTIM Mobile e potrai visualizzarlo:</p>
-        
-       <form name = 'myForm'>
-           Vendor: 
-         <div id="cells">
-         
-           <select id = 'vendor' onchange="findPhone()" >
-         </select>
-           </div>
-           Model: 
-           <div id="cells">
-           
-           <select id = 'model'>
-         </select>
-           </div>
+
+        <form name='myForm'>
+            Vendor:
             <div id="cells">
-         <input align='center' type = 'button' onclick = 'find()' value = 'Cerca'/>
-           </div>
-           
-      </form>
-        <div class="container">
-        <div id='services'></div>
+
+                <select id='vendor' onchange="findPhone()">
+                </select>
+            </div>
+            Model:
+            <div id="cells">
+
+                <select id='model'>
+                </select>
+            </div>
+            <div id="cells">
+                <input align='center' type='button' onclick='find()' value='Cerca' />
+            </div>
+
+        </form>
+        <div>
+            <div id='services'></div>
         </div>
     </div>
-    
+
     <div id='footer'></div>
 
 

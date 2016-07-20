@@ -75,14 +75,10 @@
             ajaxRequest.open("GET", "http://hyp59.altervista.org/phpFiles/loadDevices4G.php", true);
             ajaxRequest.send(null);
         }
-        
-        
-        
-        
+       
          function initMap() {
         var mapDiv = document.getElementById('map');
         var map = new google.maps.Map(mapDiv, {
-         
             center: {lat: 45.27, lng: 9.11},
             zoom: 8
         });
@@ -98,10 +94,9 @@
 <body>
     <div id="header"></div>
     <ol class="breadcrumb" id='bread'>
-		<li><a href="../pages/index.html">Home</a></li>
         <li><a href="../pages/assistanceService.html">Assistenza</a></li>
          <li><a href="assistanceService.html?Gestione%20linea%20e%20servizi&Mobile">Gestione linea e servizi Mobile</a></li>
-        <li>Verifica copertura 4G</li>
+        <li class='active'>Verifica copertura 4G</li>
 	</ol>
     <div class="container">
 
