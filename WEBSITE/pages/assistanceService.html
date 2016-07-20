@@ -53,7 +53,7 @@ function replaceAll(str, find, replace) {
                                     
                                     var ajaxDisplay = document.getElementById('services');
                                     ajaxDisplay.innerHTML = queryRequest.responseText;
-                                    document.getElementById('bread').innerHTML += "</a></li><li><a href='#' onclick='javascript:void(0);'>" + two[0] +" "+two[1] + "</a></li>";
+                                    document.getElementById('bread').innerHTML = " <ol class='breadcrumb'><li><a href='assistanceService.html'>Assistenza</a></li><li class='active'>" + two[0] + " "+ two[1] + "</a></li></ul>";
                                 }
                             }
                         }} else
@@ -126,7 +126,7 @@ function replaceAll(str, find, replace) {
                                 if ((queryRequest.responseText).length != 0) {
                                     var ajaxDisplay = document.getElementById('services');
                                     ajaxDisplay.innerHTML = queryRequest.responseText;
-                                    document.getElementById('bread').innerHTML +="</a></li><li><a href='#' onclick='javascript:void(0);'>" + head + " "+ txt + "</a></li>";
+                                    document.getElementById('bread').innerHTML =" <ol class='breadcrumb'><li><a href='assistanceService.html'>Assistenza</a></li><li class='active'>" + head + " "+ txt + "</a></li></ul>";
                                 }
                             }
                         }
@@ -166,14 +166,15 @@ function replaceAll(str, find, replace) {
 
 <body>
     <div id="header"></div>
-
-    <ol class="breadcrumb" id='bread'>
-        <li><a href="../pages/index.html">Home</a></li>
-        <li><a href="../pages/assistanceService.html">Assistenza</a></li>
-    </ol>
+<div id='bread'></div>
+   <div align='center'>
+       <div style='max-width:200px'>
+           <div style='display:inline-block; float:left;'> <img src='../images/setting.png'></div><div style='display=inline-block; float:right;'> <h3>Assistenza</h3></div>
+    </div>
+    </div>
     <div class="container">
         <div class="row" id='services'>
-            <br><br>...loading...
+            <br><br><h5>...loading...</h5>
         </div>
         <hr>
        

@@ -22,15 +22,16 @@ ORDER BY `path` ASC LIMIT 1" ;
 	  $qryImg_result = mysql_query($queryImg) or die(mysql_error());
 	  $pathrow = mysql_fetch_array($qryImg_result);
 	  $display_string .= '<div class="col-sm-4">
-									<div class="phonebox">
-										<center> <img class="img-responsive" src="'.$pathrow[path].'">
-											<p id="Model">'.$row[model].'
-												<br>'.$row[vendor].'</p>
-											<p id="Price">'.$row[price].'</p>
-											<button type="button" class="btn btn-md">Scopri</button>
-										</center>
-									</div>
-								</div>' ;
+							<div class="panel panel-default">
+								<div class="panel-body"><center>
+<div class="phonebox"> <img class="img-responsive" src="'.$pathrow[path].'">
+		<p id="model">'.$row[model].'</p>
+		<p id="vendor">'.$row[vendor].'</p>
+        
+		<button id="dettagli" type="button" onclick="loadPhone(\''.$row[model].'\',\''.$row[vendor].'\')" class="btn btn-primary btn-md">Scopri</button>
+	
+	</center>
+</div></div></div></div>' ;
    }
   
    echo $display_string;

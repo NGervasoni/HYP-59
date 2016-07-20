@@ -63,7 +63,7 @@ function ajaxFunction(vendor, model) {
 	//state==4  request finished and response ready
 	ajaxRequest2.onreadystatechange = function () {
 		if (ajaxRequest2.readyState == 4) {
-			var ajaxDisplay = document.getElementById('carImg');
+			var ajaxDisplay = document.getElementById('myCarousel');
 			ajaxDisplay.innerHTML = ajaxRequest2.responseText;
 		}
 	}

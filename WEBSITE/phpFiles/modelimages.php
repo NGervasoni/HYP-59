@@ -33,7 +33,7 @@ while($pathrow = mysql_fetch_array($qryImg_result)){
 	$carouselString =	'<ol class="carousel-indicators">	<li data-target="#myCarousel" data-slide-to="0" class="active"></li>';
 }
 else{
-	$carouselString .= '<li data-target="#myCarousel" data-slide-to="'$i'"></li>';
+	$carouselString .= '<li data-target="#myCarousel" data-slide-to="'.$i.'"></li>';
 }
 	  $i++;				
 										
@@ -45,8 +45,8 @@ else{
 	$display_string .=  '<div class="item"> <img src="'.$pathrow[path].'"></div>';
 }
 }
-$carouselString .='</ol>';
+$carouselString .='</ol><div class="carousel-inner" role="listbox" data-wrap="true">'.$display_string.'</div>';
 	   
-   echo $display_string;
+   echo $carouselString;
 
 ?>
