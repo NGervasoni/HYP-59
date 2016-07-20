@@ -83,6 +83,7 @@ span:target ~ #tab > div:first-of-type {
   #btn_2 a:hover{
         background-color: #0b3d86;
         color:white;
+      
     }
 
 /* Always show the first tab container by default */

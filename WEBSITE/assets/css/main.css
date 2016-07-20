@@ -12,7 +12,15 @@ nav img {
     height: 1em;
 }
 
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
 
+.navbar .navbar-collapse {
+  text-align: center;
+}
 
 #logo {
     background-color: white;
@@ -1678,7 +1686,7 @@ a[disabled] {
 		background-repeat: no-repeat;
 		text-align: center;
     vertical-align: middle;
-   margin-top: 12em;
+   margin-top: 10em;
         margin-left: 5%;
         margin-right: 5%;
 	}
