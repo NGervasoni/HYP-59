@@ -9,19 +9,24 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<link rel="icon" href="../../favicon.ico">
-	<title>Smartphone e Telefoni</title>
+	<title>Outlet</title>
 	<link rel="stylesheet" href="../assets/css/main.css" />
 	<link rel="stylesheet" href="../assets/css/prodotti.css" />
+	<!-------------------- SCRIPT ---------------------------------->
+	<script src="../assets/js/ajaxLoadAllOutlet.js"></script>
+	<script src="../assets/js/loadSpecificPhonePage.js"></script>
+	<!-------------------- SCRIPT ---------------------------------->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 	<!-- Custom styles for this template -->
 	<link href="../assets/css/chi_siamo.css" rel="stylesheet">
 	<script>
-		$(function () {
-			$("#header").load("../includes/header.html");
-			$("#footer").load("../includes/footer.html");
-			$("#prodottinavbar").load("../includes/ProdottiNavbar.html");
+		$("#header").load("../includes/header.html");
+		$("#footer").load("../includes/footer.html");
+		$(document).ready(function () {
+			ajaxLoadAllOutlet();
+			//	$("#prodottinavbar").load("../includes/ProdottiNavbar.html");
 		});
 	</script>
 </head>
@@ -30,95 +35,53 @@
 	<div id="header"></div>
 	<br>
 	<br>
-	<h3>Mixed: mobile, tablet, and desktop</h3>
-	<p></p>
+	<ol class="breadcrumb">
+		<li><a href="prodotti.html">Prodotti</a></li>
+		<li class="active">Outlet</li>
+	</ol>
 	<div class="container-fluid">
 		<div class="row-fluid">
 			<div class="col-sm-2">
-				<div id="prodottinavbar"></div>
+				<div id="prodottinavbar">
+					<ul id="prodottinavbar" class="nav nav-pills nav-stacked">
+						<li role="presentation"><a href="SmartphoneETelefoni.html">Smartphone e Telefoni</a></li>
+						<li role="presentation"><a href="tabletEpc.html">Tablet e Computer</a></li>
+						<li role="presentation"><a href="ModemENetworking.html">Modem e Networking</a></li>
+						<li role="presentation"><a href="TVeSmartLiving.html">TV e Smart Living</a></li>
+						<li role="presentation" class="active"><a href="Outlet.html">Outlet</a></li>
+					</ul>
+				</div>
 			</div>
 			<div class="col-sm-10">
-				<div class="col-sm-3 filtra_prodotto"> </div>
-				<div class="col-sm-9">
-					<div class="row-fluid">
-						<div class="col-sm-4">
-							<div class="panel panel-default">
-								<div class="panel-body">
-									<div class="phonebox"> <img class="img-responsive" src="../images/Phone/huawei-p9-grey-01.jpg">
-										<center>
-											<p id="Model">Model
-												<br>Vendor</p>
-											<p id="Price">Price</p>
-											<button type="button" class="btn btn-default btn-md">Scopri</button>
-										</center>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="panel panel-default">
-								<div class="panel-body">
-									<div class="phonebox"> <img class="img-responsive" src="../images/Phone/huawei-p9-grey-01.jpg">
-										<center>
-											<p id="Model">Model
-												<br>Vendor</p>
-											<p id="Price">Price</p>
-											<button type="button" class="btn btn-default btn-md">Scopri</button>
-										</center>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="panel panel-default">
-								<div class="panel-body">
-									<div class="phonebox"> <img class="img-responsive" src="../images/Phone/huawei-p9-grey-01.jpg">
-										<center>
-											<p id="Model">Model
-												<br>Vendor</p>
-											<p id="Price">Price</p>
-											<button type="button" class="btn btn-default btn-md">Scopri</button>
-										</center>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="panel panel-default">
-								<div class="panel-body">
-									<div class="phonebox"> <img class="img-responsive" src="../images/Phone/huawei-p9-grey-01.jpg">
-										<center>
-											<p id="Model">Model
-												<br>Vendor</p>
-											<p id="Price">Price</p>
-											<button type="button" class="btn btn-default btn-md">Scopri</button>
-										</center>
-									</div>
-								</div>
-							</div>
-						</div>
+				<div class="row-fluid">
+					<div class="col-sm-3 filtra_prodotto"> </div>
+					<div class="col-sm-9">
+						<div class="row-fluid" id='ajaxDiv'> </div>
 					</div>
 				</div>
-				<!-- Marketing messaging and featurettes
+			</div>
+		</div>
+	</div>
+	<!-- Marketing messaging and featurettes
     ================================================== -->
-				<!-- Wrap the rest of the page in another container to center all the content. -->
-				<!-- FOOTER -->
-				<footer>
-					<div id="footer"></div>
-				</footer>
-				<!-- /.container -->
-				<!-- Bootstrap core JavaScript
+	<!-- Wrap the rest of the page in another container to center all the content. -->
+	<!-- FOOTER -->
+	<footer>
+		<div id="footer"></div>
+	</footer>
+	<!-- /.container -->
+	<!-- Bootstrap core JavaScript
     ================================================== -->
-				<!-- Placed at the end of the document so the pages load faster -->
-				<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-				<script>
-					window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
-				</script>
-				<script src="../../dist/js/bootstrap.min.js"></script>
-				<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-				<script src="../../assets/js/vendor/holder.min.js"></script>
-				<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-				<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
+		window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
+	</script>
+	<script src="../../dist/js/bootstrap.min.js"></script>
+	<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+	<script src="../../assets/js/vendor/holder.min.js"></script>
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 </body>
 
 </html>

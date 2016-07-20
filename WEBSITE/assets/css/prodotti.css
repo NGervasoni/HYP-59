@@ -6,11 +6,15 @@
 	margin-bottom: 0;
 }
 
-#price {
+#price,
+#promotion {
 	color: red;
 	font-size: 1.5em;
 	font-family: sans-serif;
+	display: inline-block;
 }
+
+#promotion {}
 
 .breadcrumb2 {
 	padding: 8px 15px;

@@ -8,7 +8,7 @@ if(mysqli_connect_errno()){
 }  
    
    //build query
-   $query = "SELECT * FROM Telefoni";
+   $query = "SELECT * FROM Networking";
  
    //Execute query
    $qry_result = mysql_query($query) or die(mysql_error());
@@ -24,15 +24,15 @@ ORDER BY `path` ASC LIMIT 1" ;
 <div class="phonebox"> <img class="img-responsive" src="'.$pathrow[path].'">
 		<p id="model">'.$row[model].'</p>
 		<p id="vendor">'.$row[vendor].'</p>';
-	  
-	  if($row[promotion]!=null){
-		  $display_string .= '<div style="display: inline-block"><p id="price"><del>'.$row[price].' &#8364</del></p><p id="promotion">&nbsp'.$row[promotion].' &#8364</p></div>';
-	  }
-	  else{
-		  $display_string .= '<div style="display: inline-block"><p id="price">'.$row[price].' &#8364</p><div>';
-	  }
-	  
-	   $display_string .= '	<button id="dettagli" type="button" onclick="loadPhone(\''.$row[model].'\',\''.$row[vendor].'\')" class="btn btn-primary btn-md">DETTAGLI</button>
+		 
+		 if(isset($row[promotion]) ){
+			 $display_string .= '<p id="price"><del>'.$row[price].' &#8364</del>   '.$row[promotion].' &#8364</p>';
+		 }
+	  	else {
+			$display_string .= '<p id="price">'.$row[price].' &#8364</p>';
+		}
+        
+		$display_string .'=<button id="dettagli" type="button" onclick="loadPhone(\''.$row[model].'\',\''.$row[vendor].'\')" class="btn btn-primary btn-md">DETTAGLI</button>
 	
 	</center>
 </div></div></div></div>';

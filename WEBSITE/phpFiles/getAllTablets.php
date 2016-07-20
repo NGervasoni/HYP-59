@@ -8,7 +8,7 @@ if(mysqli_connect_errno()){
 }  
    
    //build query
-   $query = "SELECT * FROM Telefoni";
+   $query = "SELECT * FROM TabletPC";
  
    //Execute query
    $qry_result = mysql_query($query) or die(mysql_error());
