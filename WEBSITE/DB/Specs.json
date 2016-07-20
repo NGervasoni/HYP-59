@@ -1,9 +1,0 @@
-/**
- Export to JSON plugin for PHPMyAdmin
- @version 0.1
- */
-
-// Database 'my_hyp59'
-// my_hyp59.Specs
-
-[{"Vendor":"HUAWEI","Model":"P9","Tecnologia":"Abilitato tecnologia 4GPlus\/4G\/HSDPA 42\/UMTS\/EDGE\/GPRS Frequenze 850\/900\/1800\/1900MHz\r\n","Connettivit\u00e0":"4G cat.6\/HSDPA42\/UMTS\/EDGE\/GPRS Frequenze 850\/900\/1800\/1900\/2100 Wi-Fi a\/b\/g\/n\/ac dual band 2,4\/5GHz con Wi-Fi Direct Bluetooth 4.2, BLE USB Type-C, NFC","GPS":"GPS Integrato","Display":"Display IPS Full HD da 5.2\u2019\u2019","Fotocamera":"Principale 12MP x 2, f\/2.2 Leica BSI CMOS Flash dual-tone Frontale 8MP, f\/2.4","Memoria Interna":"32GB","Processore":"Processore Kirin 955 - Octa-Core (4x2,5 GHz + 4x1,8 GHz)","In dotazione":"Smartphone Auricolari stereo - Caricabatteria Cavo USB Type-C - Estrattore SIM Guida rapida","Dimensioni":"145 x 70,9 x 6,95 mm","Peso":"144 grammi","Autonomia":"Stand-by fino a 566 ore - Conversazione fino a 1980 min"}]

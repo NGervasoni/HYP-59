@@ -36,7 +36,7 @@ if(mysqli_connect_errno()){
 									<div id="description">
 										'.$row[presentation].'
 									</div>
-									<p id="prezzo">'.$row[price].' &#8364</p>';
+									<center><p id="price">'.$row[price].' &#8364</p></center>';
                                     //&#8364 euro symbol
    }
   

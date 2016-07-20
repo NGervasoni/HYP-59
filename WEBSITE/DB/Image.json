@@ -1,9 +1,0 @@
-/**
- Export to JSON plugin for PHPMyAdmin
- @version 0.1
- */
-
-// Database 'my_hyp59'
-// my_hyp59.Image
-
-[{"vendor":"HUAWEI","model":"P9","image":"..\\images\\Phone\\huawei-p9-grey-01.JPG"}, {"vendor":"HUAWEI","model":"P9","image":"..\\images\\Phone\\huawei-p9-grey-02.jpg"}, {"vendor":"HUAWEI","model":"P9","image":"..\\images\\Phone\\huawei-p9-grey-03.jpg"}, {"vendor":"HUAWEI","model":"P9","image":"..\\images\\Phone\\huawei-p9-grey-04.jpg"}]
