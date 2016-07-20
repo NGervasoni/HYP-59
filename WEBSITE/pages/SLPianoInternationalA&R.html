@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../images/favicon.ico">
-    <title>Piani Tariffari</title>
+    <title>Tim International</title>
     <link rel="stylesheet" href="../assets/css/main.css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
@@ -20,47 +20,8 @@
         $(function () {
             $("#header").load("../includes/header.html");
             $("#footer").load("../includes/footer.html");	$("#prodottinavbar").load("../includes/ProdottiNavBar.html");
-             ajaxFunction();
         });
-    function ajaxFunction(){
-               var ajaxRequest;  // The variable that makes Ajax possible!
-               
-               try {
-                  // Opera 8.0+, Firefox, Safari
-                  ajaxRequest = new XMLHttpRequest();
-               }catch (e) {
-                  // Internet Explorer Browsers
-                  try {
-                     ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
-                  }catch (e) {
-                     try{
-                        ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
-                     }catch (e){
-                        // Something went wrong
-                        alert("Your browser broke!");
-                        return false;
-                     }
-                  }
-               }
-               
-               // Create a function that will receive data 
-               // sent from the server and will update
-               // div section in the same page.
-					
-               ajaxRequest.onreadystatechange = function(){
-                  if(ajaxRequest.readyState == 4){
-                     var ajaxDisplay = document.getElementById('ajaxDiv');
-                     ajaxDisplay.innerHTML = ajaxRequest.responseText;
-                  }
-               }
-               
-               // Now get the value from user and pass it to
-               // server script.
-					
-            
-               ajaxRequest.open("GET", "http://hyp59.altervista.org/phpFiles/loadPricePlans.php", true);
-               ajaxRequest.send(null); 
-            }
+    
     </script>
 </head>
 
@@ -73,19 +34,37 @@
     
     <div class="breadcrumb">
         <li><a href="SmartLifeHome.html">Smart Life</a></li>
-        <li>Piani Tariffari</li>
+        <li><a href="SLPianiTariffari.html">Piani Tariffari</a></li>
+        <li>TIM International</li>
      
-
     </div>
+      <div class="breadcrumb" id="right">
+        <li><a href="SLPianoInternational.html">Descrizione</a></li>
+    <li>Attivazione e Regole</li></div><br>
+    <hr>
    
     <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
     <div class="container marketing">
-        <h1>Piani Tariffari</h1>
+        <h1>TIM International</h1>
         <div id="container">
-        <div id="ajaxDiv"></div></div>
+        <br>
+<h3 style='color:black'>Costi<br><br></h3>
+
+<h5>TIM International 200 ha un costo di 5 € ogni 4 sett.<br><br>
+
+    Il costo di attivazione dell’offerta è gratuito sia per i già clienti TIM, che per chi passa a TIM mantenendo il proprio numero o attiva una nuova linea.<br><br></h5>
+
+<h3 style='color:black'>Come si attiva<br><br></h3>
+
+<h5>Se sei un cliente TIM International 1000, International Voce, International Base, puoi attivare International 200:<br><br>
+<ul>
+<li> &nbsp;&bull;&nbsp;direttamente online;</li>
+<li> &nbsp;&bull;&nbsp;presso i Negozi TIM;</li>
+<li> &nbsp;&bull;&nbsp;chiamando gratuitamente il numero 40916;</li>
+    <li> &nbsp;&bull;&nbsp;inviando un SMS gratuito al 40916 con testo  “INTERNATIONAL200 ON”.</li></ul></h5><br></div>
         </div>
         <!-- FOOTER -->
         <footer>
