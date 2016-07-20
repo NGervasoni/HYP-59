@@ -125,8 +125,10 @@ function replaceAll(str, find, replace) {
                             if (queryRequest.readyState == 4) {
                                 if ((queryRequest.responseText).length != 0) {
                                     var ajaxDisplay = document.getElementById('services');
+                                    $("html, body").animate({ scrollTop: 0 }, "slow");
                                     ajaxDisplay.innerHTML = queryRequest.responseText;
                                     document.getElementById('bread').innerHTML =" <ol class='breadcrumb'><li><a href='assistanceService.html'>Assistenza</a></li><li class='active'>" + head + " "+ txt + "</a></li></ul>";
+                                    
                                 }
                             }
                         }
