@@ -28,7 +28,7 @@ ORDER BY `path` ASC LIMIT 1" ;
 		<p id="model">'.$row[model].'</p>
 		<p id="vendor">'.$row[vendor].'</p>
         
-		<button id="dettagli" type="button" onclick="loadPhone(\''.$row[model].'\',\''.$row[vendor].'\')" class="btn btn-primary btn-md">Scopri</button>
+		<button id="dettagli" type="button" class="btn btn-primary btn-md disabled">Scopri</button>
 	
 	</center>
 </div></div></div></div>' ;

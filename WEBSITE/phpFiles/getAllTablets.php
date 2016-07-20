@@ -18,7 +18,7 @@ if(mysqli_connect_errno()){
 ORDER BY `path` ASC LIMIT 1" ;
 	  $qryImg_result = mysql_query($queryImg) or die(mysql_error());
 	  $pathrow = mysql_fetch_array($qryImg_result);
-	 $display_string .=  '<div class="col-sm-4">
+	 $display_string .=  '<div class="col-sm-3">
 							<div class="panel panel-default">
 								<div class="panel-body"><center>
 <div class="phonebox"> <img class="img-responsive" src="'.$pathrow[path].'">
@@ -32,7 +32,7 @@ ORDER BY `path` ASC LIMIT 1" ;
 		  $display_string .= '<div style="display: inline-block"><p id="price">'.$row[price].' &#8364</p><div>';
 	  }
 	  
-	   $display_string .= '	<button id="dettagli" type="button" onclick="loadPhone(\''.$row[model].'\',\''.$row[vendor].'\')" class="btn btn-primary btn-md">DETTAGLI</button>
+	   $display_string .= '	<button id="dettagli" type="button" class="btn btn-primary btn-md disabled">DETTAGLI</button>
 	
 	</center>
 </div></div></div></div>';
