@@ -12,11 +12,13 @@
 	<title>Prodotto Layout</title>
 	<link rel="stylesheet" href="../assets/css/main.css" />
 	<link rel="stylesheet" href="../assets/css/prodotti.css" />
-    
-   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    
+	<!-------------------- SCRIPT ---------------------------------->
+	<script src="../assets/js/getPhone.js"></script>
+	<script src="../assets/js/parseQueryString.js"></script>
+	<!-------------------- SCRIPT ---------------------------------->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 	<!-- Custom styles for this template -->
 	<link href="../assets/css/chi_siamo.css" rel="stylesheet">
 	<script>
@@ -35,6 +37,12 @@
 			document.getElementById("Presentazione").style.display = "none";
 			document.getElementById("Specifiche").style.display = "initial";
 		}
+
+		function loadService(string) {
+			if (string == "CONFIG") {
+				location.assign("ASconfigurazione.html?vendor=" + getParameterByName('vendor') + "&model=" + getParameterByName('model'));
+			}
+		}
 	</script>
 </head>
 
@@ -49,57 +57,149 @@
 	</ol>
 	<h3 id="NomeProdotto"></h3>
 	<p></p>
-	<div class="container-fluid">
-		<div class="row-fluid">
-			<div class="col-sm-2">
-				<div id="prodottinavbar"></div>
+	<div data-brackets-id="2611" class="container-fluid">
+		<div data-brackets-id="2612" class="row-fluid">
+			<div data-brackets-id="2613" class="col-sm-2">
+				<div data-brackets-id="2614" id="prodottinavbar">
+					<ul id="prodottinavbar" class="nav nav-pills nav-stacked">
+						<li role="presentation" class="active"><a href="SmartphoneETelefoni.html">Smartphone e Telefoni</a></li>
+						<li role="presentation"><a href="tabletEpc.html">Tablet e Computer</a></li>
+						<li role="presentation"><a href="ModemENetworking.html">Modem e Networking</a></li>
+						<li role="presentation"><a href="TVeSmartLiving.html">TV e Smart Living</a></li>
+						<li role="presentation"><a href="Outlet.html">Outlet</a></li>
+					</ul>
+				</div>
 			</div>
-			<div class="col-sm-10">
-				<ul class="nav nav-tabs">
-					<li class="active"><a data-toggle="tab" href="#Presentazione" onclick="presentazione()">Presentazione</a></li>
-					<li><a data-toggle="tab" href="#Specifiche" onclick="specifiche()">Specifiche</a></li>
+			<div data-brackets-id="2626" class="col-sm-10">
+				<ul data-brackets-id="2627" class="nav nav-tabs">
+					<li data-brackets-id="2628" class="active"><a data-brackets-id="2629" data-toggle="tab" href="#Presentazione" onclick="presentazione()">Presentazione</a></li>
+					<li data-brackets-id="2630" class=""><a data-brackets-id="2631" data-toggle="tab" href="#Specifiche" onclick="specifiche()">Specifiche</a></li>
 				</ul>
-				<div class="tab-content">
-					<div id="Presentazione" class="tab-pane fade in active">
-						<div class="row">
-							<div class="col-sm-6">
-								<div id="myCarousel" class="carousel slide container" data-ride="carousel" style="width: 80%; height:auto">
+				<div data-brackets-id="2632" class="tab-content">
+					<div data-brackets-id="2633" id="Presentazione" class="tab-pane fade active in" style="display: initial;">
+						<div data-brackets-id="2634" class="row">
+							<div data-brackets-id="2635" class="col-sm-6">
+								<div data-brackets-id="2636" id="myCarousel" class="carousel slide container" data-ride="carousel" style="width: 80%; height:auto">
 									<ol class="carousel-indicators">
 										<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 										<li data-target="#myCarousel" data-slide-to="1"></li>
 										<li data-target="#myCarousel" data-slide-to="2"></li>
-										<li data-target="#myCarousel" data-slide-to="3"></li>
 									</ol>
 									<div class="carousel-inner" role="listbox" data-wrap="true">
-										<div class="item active"> <img src="../images/Phone/huawei-p9-grey-01.jpg"> </div>
-										<div class="item"> <img src="../images/Phone/huawei-p9-grey-02.jpg" alt="Chania"> </div>
-										<div class="item"> <img src="../images/Phone/huawei-p9-grey-03.jpg" alt="Chania"> </div>
-										<div class="item"> <img src="../images/Phone/huawei-p9-grey-04.jpg" alt="Chania"> </div>
+										<div class="item"><img src="..\images\Phone\APPLE_OIPHONE_SE_spacegrey_01.jpg"></div>
+										<div class="item active"> <img src="..\images\Phone\APPLE_OIPHONE_SE_spacegrey_02.jpg"></div>
+										<div class="item"> <img src="..\images\Phone\APPLE_OIPHONE_SE_spacegrey_03.jpg"></div>
 									</div>
-									<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"> <span class="sr-only">Previous</span> </a>
-									<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"> <span class="sr-only">Next</span> </a>
 								</div>
 							</div>
-							<div class="col-sm-6">
-								<div class="phonebox"> </div>
+							<div data-brackets-id="2641" class="col-sm-6">
+								<div data-brackets-id="2642" id="phoneboxPres">
+									<h2 id="nome">Apple iPhone SE 16GB</h2>
+									<div id="description">
+										<div class="cont-desc cont-section" id="section1">
+											<div class="cont-row">
+												<h4>Descrizione</h4> </div>
+											<p>Il telefono da 4" più potente di sempre. iPhone SE riprende un design compatto di grande successo aggiungendovi due fotocamere evolute e una potenza di elaborazione incredibile.Disegnato per stare comodamente in mano e risultare piacevole al tatto, grazie alla finitura satinata del guscio in alluminio microsabbiato.</p>
+											<p>iPhone SE ha un display Retina da 4", chip A9 con archittetura a 64 bit di livello desktop, sensore di impronte digitali Touch ID, fotocamera iSight da 12MP, videocamera FaceTime HD con Retina flash, Live Photos e connessioni Wi-Fi e 4G veloci. E ancora, iOS 9 e iCloud.</p>
+										</div>
+									</div>
+									<p id="price">509.90 €</p>
+								</div>
+								<div class="row">
+									<div data-brackets-id="2626" class="col-sm-6">
+										<div id="linkedSL">
+											<div class="panel-group">
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+        <a data-toggle="collapse" href="#collapse1">Servizi Smart Life disponibili</a>
+      </h4> </div>
+													<div id="collapse1" class="panel-collapse collapse">
+														<ul class="list-group">
+															<a href="ASconfigurazione.html?&" onclick="loadService(CONFIG)">
+																<li class="list-group-item">One</li>
+															</a>
+															<a href="ASconfigurazione.html?&">
+																<li class="list-group-item">Two</li>
+															</a>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div data-brackets-id="2626" class="col-sm-6">
+										<div id="linkedSL">linkedSL</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div id="Specifiche" class="tab-pane fade ">
-					<p>Some content in menu 1.</p>
-					<div class="phonebox">
-						<h2 id="nome">Vendor Model</h2>
-						<div itemprop="description">
-							<h5>Caratteristiche:</h5>
-							<ul>
-								<li>Sistema Operativo Android 6.0</li>
-								<li>Display IPS Full HD da 5.2’’</li>
-								<li>Doppia Fotocamera Leica da 12 Mpxl Dual Flash + anteriore da 8 Mpxl</li>
-								<li>Processore Kirin 955 - Octa-Core (4x2,5 GHz + 4x1,8 GHz)</li>
-							</ul>
+				<div data-brackets-id="2643" id="Specifiche" class="tab-pane  active" style="display: none;">
+					<div data-brackets-id="2644" id="phoneboxSpecs">
+						<h2 data-brackets-id="2645" class="nome">Apple iPhone%20SE%2016GB</h2>
+						<div data-brackets-id="2646" id="description">
+							<h5 data-brackets-id="2647">Caratteristiche:</h5>
+							<div data-brackets-id="2648" class="table-responsive">
+								<table data-brackets-id="2649" class="table">
+									<tbody data-brackets-id="2650" id="specTable">
+										<tr>
+											<td>Vendor</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Model</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Tecnologia</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Connettivit�</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>GPS</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Display</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Fotocamera</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Memoria Interna</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Processore</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>In dotazione</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Dimensioni</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Peso</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Autonomia</td>
+											<td></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
 						</div>
-						<p id="prezzo">599,90 €</p>
 					</div>
 				</div>
 			</div>
