@@ -25,11 +25,8 @@ if(mysqli_connect_errno()){
    $qry_result = mysql_query($query) or die(mysql_error());
 
   while($row = mysql_fetch_array($qry_result)) {
-	  echo 'asdf';
 	 $display_string .= '<li class="list-group-item">Copertura 4G</li>';
-	  echo 'asdf';
    }
    echo $display_string;
-echo 'asdf';
 
 ?>

@@ -90,6 +90,11 @@ span ~ #tab > div:first-of-type,
 
 
 @media (min-width: 664px) {
+    
+    .b{
+     float:right; position:absolute;   
+    }
+    
     #cells {
         width: 25%;
         padding: 20px 20px;

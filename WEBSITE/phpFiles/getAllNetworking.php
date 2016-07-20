@@ -18,21 +18,21 @@ if(mysqli_connect_errno()){
 ORDER BY `path` ASC LIMIT 1" ;
 	  $qryImg_result = mysql_query($queryImg) or die(mysql_error());
 	  $pathrow = mysql_fetch_array($qryImg_result);
-	 $display_string .=  '<div class="col-sm-4">
+	 $display_string .=  '<div class="col-sm-3">
 							<div class="panel panel-default">
 								<div class="panel-body"><center>
 <div class="phonebox"> <img class="img-responsive" src="'.$pathrow[path].'">
 		<p id="model">'.$row[model].'</p>
 		<p id="vendor">'.$row[vendor].'</p>';
-		 
-		 if(isset($row[promotion]) ){
-			 $display_string .= '<p id="price"><del>'.$row[price].' &#8364</del>   '.$row[promotion].' &#8364</p>';
-		 }
-	  	else {
-			$display_string .= '<p id="price">'.$row[price].' &#8364</p>';
-		}
-        
-		$display_string .'=<button id="dettagli" type="button" onclick="loadPhone(\''.$row[model].'\',\''.$row[vendor].'\')" class="btn btn-primary btn-md">DETTAGLI</button>
+	  
+	  if($row[promotion]!=null){
+		  $display_string .= '<div style="display: inline-block"><p id="price"><del>'.$row[price].' &#8364</del></p><p id="promotion">&nbsp'.$row[promotion].' &#8364</p></div>';
+	  }
+	  else{
+		  $display_string .= '<div style="display: inline-block"><p id="price">'.$row[price].' &#8364</p><div>';
+	  }
+	  
+	   $display_string .= '	<button id="dettagli" type="button" class="btn btn-primary btn-md disabled">DETTAGLI</button>
 	
 	</center>
 </div></div></div></div>';

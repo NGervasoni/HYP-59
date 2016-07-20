@@ -18,7 +18,7 @@ if(mysqli_connect_errno()){
 
    
    $display_string = "<br>";
-   $display_string .= "<h2><b>Scegli l'offerta più adatta a te:<br><br></b></h2><h3>Mobile:<br><br>";
+   $display_string .= "<h2><b>Scegli l'offerta più adatta a te:<br><br></b></h2><h3>Mobile:<br><br></h3>";
    // Insert a new row in the table for each person returned
   while($row = mysql_fetch_array($qry_result1)) {
   

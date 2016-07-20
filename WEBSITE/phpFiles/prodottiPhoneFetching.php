@@ -25,12 +25,14 @@ if(mysqli_connect_errno()){
 								<div class="panel-body"><center>
 <div class="phonebox"> <img class="img-responsive" src="'.$pathrow[path].'">
 		<p id="model">'.$row[model].'</p>
-		<p id="vendor">'.$row[vendor].'</p>
-        
-		<button id="dettagli" type="button" onclick="loadPhone(\''.$row[model].'\',\''.$row[vendor].'\')" class="btn btn-primary btn-md">Scopri</button>
-	
-	</center>
-</div></div></div></div>' ;
+		<p id="vendor">'.$row[vendor].'</p>';
+         if($row[type]!='smartphone'){
+			$display_string .= '<button id="dettagli" type="button" class="btn btn-primary btn-md disabled">Scopri</button>';
+		}
+		else {$display_string .= '<button id="dettagli" type="button" onclick="loadPhone(\''.$row[model].'\',\''.$row[vendor].'\')" class="btn btn-primary btn-md">Scopri</button>'; }
+	$display_string .=
+	'</center>
+</div></div></div></div>';
    }
   
    echo $display_string;

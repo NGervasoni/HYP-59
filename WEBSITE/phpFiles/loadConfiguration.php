@@ -13,7 +13,7 @@ $query = "SELECT * FROM Image WHERE vendor='$vendor' AND model='$model' GROUP BY
    $qry_result = mysql_query($query) or die(mysql_error());
    //build query
    while($im = mysql_fetch_array($qry_result)){
-   $display_string="<div widht='30%' ><img src='$im[path]' width=30% style='cursor:pointer' onclick=loadPhone('$model','$vendor')>$im[vendor] $im[model]</div>";
+   $display_string="<br><div widht='30%' ><img src='$im[path]' width=30% style='cursor:pointer' onclick=loadPhone('$model','$vendor')>$im[vendor] $im[model]</div><br>";
    }
    echo $display_string;
    $query1 = "SELECT title,path FROM Configurazione WHERE vendor='$vendor' AND model='$model'";
@@ -23,7 +23,7 @@ $query = "SELECT * FROM Image WHERE vendor='$vendor' AND model='$model' GROUP BY
   
    // Insert a new row in the table for each person returned
   while($row = mysql_fetch_array($qry_result1)) {
-      $display_string .= "<a href='$row[path]'><div class='col-sm-3' style='display:inline-block;cursor:pointer;height:100px'><img src='../images/settingSheet.png' style='float:left'><p style='float:right;width:70%;'>$row[title]</p></div></a>";
+      $display_string .= "<a href='$row[path]'><div class='col-sm-3' style='display:inline-block;cursor:pointer;height:100px'><img src='../images/settingSheet.png' style='float:left'><p style='float:right;width:70%;margin-left:6px'>$row[title]</p></div></a>";
             
    }
 
@@ -31,4 +31,4 @@ $query = "SELECT * FROM Image WHERE vendor='$vendor' AND model='$model' GROUP BY
   
    
 
-?>
+?>

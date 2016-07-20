@@ -13,7 +13,7 @@ if(mysqli_connect_errno()){
    // Retrieve data from Query String
    $model = $_GET['model'];
    $vendor = $_GET['vendor'];
-   $display_string.=var_dump($model).var_dump($model);
+  // $display_string.=var_dump($model).var_dump($model);
    // Escape User Input to help prevent SQL Injection
     $model = mysql_real_escape_string($model);
    $vendor = mysql_real_escape_string($vendor);
