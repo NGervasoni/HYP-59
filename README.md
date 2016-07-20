@@ -9,7 +9,7 @@ a.a. 2015/2016.
 Questa è una demo funzionante del sito web. I dati sono prelevati dal database caricato su altervista.org. Il database viene utilizzato per caricare i contenuti delle pagine dinamicamente, in particolare il database contiene:
 * Elenco di servizi di assistenza
 * Prodotti in vendita
-* Elenco di Smart Life service
+* Elenco di piani tariffari (dentro i servizi Smart Life)
 
 Il sito è caricato su hyp59.altervista.org oppure  accessibile attraverso l'app TIMhyp59. 
 
@@ -22,6 +22,8 @@ Il sito è caricato su hyp59.altervista.org oppure  accessibile attraverso l'app
     * Tim Music
     * Tim Reading
     * Netflix
+    * TIM Young(Piano Tariffario)
+    * TIM International(Piano Tariffario)
 - Assistenza
     * Verifica copertura 4G
     * Configurazione online
