@@ -32,10 +32,13 @@ ORDER BY `path` ASC LIMIT 1" ;
 		  $display_string .= '<div style="display: inline-block"><p id="price">'.$row[price].' &#8364</p><div>';
 	  }
 	  
-	   $display_string .= '	<button id="dettagli" type="button" onclick="loadPhone(\''.$row[model].'\',\''.$row[vendor].'\')" class="btn btn-primary btn-md">DETTAGLI</button>
-	
-	</center>
-</div></div></div></div>';
+	    if($row[type]!='smartphone'){
+			$display_string .= '<button id="dettagli" type="button" class="btn btn-primary btn-md disabled">Scopri</button>';
+		}
+		else {$display_string .= '<button id="dettagli" type="button" onclick="loadPhone(\''.$row[model].'\',\''.$row[vendor].'\')" class="btn btn-primary btn-md">Scopri</button>'; }
+	$display_string .=
+	'</center>
+</div></div></div></div>' ;
    }
   
    echo $display_string;
