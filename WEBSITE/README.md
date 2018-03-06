@@ -1,7 +1,6 @@
 # Hyp59 - TIM website
 ### Politecnico di Milano project
 
-Sito web disponibile al sito: http://hyp59.altervista.org/pages/index.html
 
 Progetto del corso di Hypermedia web application, facoltà di ingegneria informatica
 a.a. 2015/2016.
@@ -13,7 +12,7 @@ Questa è una demo funzionante del sito web. I dati sono prelevati dal database 
 * Prodotti in vendita
 * Elenco di Smart Life service
 
-Il sito è caricato su hyp59.altervista.org oppure  accessibile attraverso l'app TIMhyp59. 
+Il sito è caricato su http://hyp59.altervista.org oppure  accessibile attraverso l'app TIMhyp59. 
 
 ### Pagine sviluppate
 - Prodotti
