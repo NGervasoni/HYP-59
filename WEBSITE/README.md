@@ -1,6 +1,7 @@
 # Hyp59 - TIM website
 ### Politecnico di Milano project
 
+Sito web disponibile al sito: http://hyp59.altervista.org/pages/index.html
 Progetto del corso di Hypermedia web application, facoltà di ingegneria informatica
 a.a. 2015/2016.
 
